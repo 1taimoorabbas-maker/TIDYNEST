@@ -1,9 +1,8 @@
 {
-  "siteName": "TidyNest",
-  "tagline": "Organize Your Home, Simplify Your Life",
-  "siteDomain": "https://tidynest.netlify.app",
-  "pinterestProfileUrl": "https://pinterest.com/yourusername",
-  "pinterestDomainVerifyToken": "YOUR_PINTEREST_TOKEN_HERE",
+"siteName": "Manziria",
+"siteDomain": "https://manziria.netlify.app",
+  "pinterestProfileUrl": "https://www.pinterest.com/manziria",
+"pinterestDomainVerifyToken": "8d02c6dc668aa2ce7bc395a8cb28ddf6",
   "amazonAssociateTag": "trainlikethep-20",
   "defaultMetaDescription": "Discover the best home organization solutions for craft rooms, pantries, closets, and bathrooms. Expert-curated picks to help you create a clutter-free, beautiful home.",
   "defaultOgImage": "/images/og-default.svg"
