@@ -1,0 +1,10 @@
+{
+  "siteName": "TidyNest",
+  "tagline": "Organize Your Home, Simplify Your Life",
+  "siteDomain": "https://example.com",
+  "pinterestProfileUrl": "https://pinterest.com/yourusername",
+  "pinterestDomainVerifyToken": "YOUR_PINTEREST_TOKEN_HERE",
+  "amazonAssociateTag": "trainlikethep-20",
+  "defaultMetaDescription": "Discover the best home organization solutions for craft rooms, pantries, closets, and bathrooms. Expert-curated picks to help you create a clutter-free, beautiful home.",
+  "defaultOgImage": "/images/og-default.svg"
+}

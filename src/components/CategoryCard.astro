@@ -1,0 +1,66 @@
+---
+import { categoryImagePath, getCategoryIcon } from '../lib/helpers';
+
+interface Props {
+  category: {
+    title: string;
+    slug: string;
+    description: string;
+    icon: string;
+  };
+  size?: 'small' | 'large';
+}
+
+const { category, size = 'small' } = Astro.props;
+const imagePath = categoryImagePath(category.slug);
+const iconSvg = getCategoryIcon(category.icon);
+---
+
+<a 
+  href={`/category/${category.slug}/`} 
+  class:list={[
+    "group block relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300",
+    size === 'large' ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3]'
+  ]}
+>
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img 
+      src={imagePath}
+      alt={category.title}
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      loading="lazy"
+      onerror="this.onerror=null; this.src='/images/placeholder-category.svg';"
+    >
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/40 to-transparent"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="absolute inset-0 flex flex-col justify-end p-4 lg:p-6">
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white">
+        <Fragment set:html={iconSvg} />
+      </div>
+      <h3 class:list={[
+        "font-serif font-semibold text-white",
+        size === 'large' ? 'text-xl lg:text-2xl' : 'text-lg lg:text-xl'
+      ]}>
+        {category.title}
+      </h3>
+    </div>
+    
+    {size === 'large' && (
+      <p class="text-stone-200 text-sm lg:text-base line-clamp-2 max-w-2xl">
+        {category.description}
+      </p>
+    )}
+    
+    <div class="mt-3 flex items-center text-white text-sm font-medium">
+      <span>Explore</span>
+      <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  </div>
+</a>

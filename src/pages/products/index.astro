@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import siteData from '../../data/site.json';
+import categoriesData from '../../data/categories.json';
+import productsData from '../../data/products.json';
+import { getProductsByCategory, getCategoryBySlug } from '../../lib/helpers';
+
+const { categories } = categoriesData;
+const { products } = productsData;
+
+const title = `All Products - ${siteData.siteName}`;
+const description = `Browse all home organization products at ${siteData.siteName}. Expert-curated picks for craft rooms, pantries, closets, and bathrooms.`;
+---
+
+<BaseLayout title={title} description={description} pathname="/products/">
+  <!-- Page Header -->
+  <section class="bg-gradient-to-br from-stone-100 via-[#f6f7f5] to-[#e8ebe4] py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center text-sm text-stone-500 mb-6">
+        <a href="/" class="hover:text-[#5e6d50] transition-colors">Home</a>
+        <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        <span class="text-stone-800">All Products</span>
+      </nav>
+      
+      <div class="text-center">
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 mb-4">
+          All Organization Products
+        </h1>
+        <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+          {products.length} expert-curated products to help you organize every room in your home
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Filter Tabs -->
+  <section class="bg-white border-b border-stone-200 sticky top-16 lg:top-20 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 py-4 overflow-x-auto scrollbar-hide">
+        <a 
+          href="#all"
+          class="flex-shrink-0 px-4 py-2 bg-[#5e6d50] text-white font-medium rounded-full text-sm transition-colors"
+        >
+          All ({products.length})
+        </a>
+        {categories.map(cat => {
+          const catProducts = getProductsByCategory(products, cat.slug);
+          return (
+            <a 
+              href={`#${cat.slug}`}
+              class="flex-shrink-0 px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium rounded-full text-sm transition-colors"
+            >
+              {cat.title} ({catProducts.length})
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Products by Category -->
+  <section class="py-12 lg:py-16 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {categories.map(category => {
+        const categoryProducts = getProductsByCategory(products, category.slug);
+        return (
+          <div id={category.slug} class="mb-16 last:mb-0 scroll-mt-32">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <h2 class="font-serif text-2xl lg:text-3xl font-bold text-stone-800">
+                  {category.title}
+                </h2>
+                <p class="text-stone-600 mt-1">{categoryProducts.length} products</p>
+              </div>
+              <a 
+                href={`/category/${category.slug}/`}
+                class="hidden sm:inline-flex items-center text-[#5e6d50] hover:text-[#4a5641] font-medium transition-colors"
+              >
+                View All
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+              {categoryProducts.map(product => (
+                <ProductCard product={product} />
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>

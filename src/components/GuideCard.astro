@@ -1,0 +1,59 @@
+---
+import { guideImagePath, getCategoryBySlug } from '../lib/helpers';
+import categoriesData from '../data/categories.json';
+
+interface Props {
+  guide: {
+    title: string;
+    slug: string;
+    categorySlug: string;
+    description: string;
+  };
+}
+
+const { guide } = Astro.props;
+const imagePath = guideImagePath(guide.slug);
+const category = getCategoryBySlug(categoriesData.categories, guide.categorySlug);
+---
+
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col h-full">
+  <!-- Image -->
+  <a href={`/guide/${guide.slug}/`} class="block relative aspect-[16/9] overflow-hidden bg-stone-100">
+    <img 
+      src={imagePath}
+      alt={guide.title}
+      onerror="this.onerror=null;this.src='/images/placeholder-guide.svg';"
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      loading="lazy"
+      onerror="this.onerror=null; this.src='/images/placeholder-guide.svg';"
+    >
+    {category && (
+      <span class="absolute top-3 left-3 bg-stone-800/80 backdrop-blur-sm text-white text-xs font-medium px-2.5 py-1 rounded-full">
+        {category.title}
+      </span>
+    )}
+  </a>
+  
+  <!-- Content -->
+  <div class="p-4 lg:p-5 flex flex-col flex-grow">
+    <a href={`/guide/${guide.slug}/`} class="block">
+      <h3 class="font-serif text-lg lg:text-xl font-semibold text-stone-800 group-hover:text-[#5e6d50] transition-colors line-clamp-2 mb-2">
+        {guide.title}
+      </h3>
+    </a>
+    
+    <p class="text-stone-600 text-sm line-clamp-3 mb-4 flex-grow">
+      {guide.description}
+    </p>
+    
+    <a 
+      href={`/guide/${guide.slug}/`}
+      class="inline-flex items-center text-[#5e6d50] hover:text-[#4a5641] font-medium text-sm transition-colors"
+    >
+      Read Guide
+      <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>

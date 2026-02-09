@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import siteData from '../../data/site.json';
+import categoriesData from '../../data/categories.json';
+import productsData from '../../data/products.json';
+import { getProductsByCategory } from '../../lib/helpers';
+
+const { categories } = categoriesData;
+const { products } = productsData;
+
+const title = `All Categories - ${siteData.siteName}`;
+const description = `Browse all home organization categories at ${siteData.siteName}. Find solutions for craft rooms, pantries, closets, bathrooms, and more.`;
+---
+
+<BaseLayout title={title} description={description} pathname="/categories/">
+  <!-- Page Header -->
+  <section class="bg-gradient-to-br from-stone-100 via-[#f6f7f5] to-[#e8ebe4] py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center text-sm text-stone-500 mb-6">
+        <a href="/" class="hover:text-[#5e6d50] transition-colors">Home</a>
+        <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        <span class="text-stone-800">Categories</span>
+      </nav>
+      
+      <div class="text-center">
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 mb-4">
+          Shop by Category
+        </h1>
+        <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+          Find the perfect organization solutions for every room in your home. Browse our curated collections.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Categories Grid -->
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8">
+        {categories.map(category => {
+          const categoryProducts = getProductsByCategory(products, category.slug);
+          return (
+            <div class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-100">
+              <div class="grid lg:grid-cols-2 gap-0">
+                <!-- Category Image -->
+                <a href={`/category/${category.slug}/`} class="block relative aspect-[16/9] lg:aspect-auto overflow-hidden group">
+                  <img 
+                    src={`/images/categories/${category.slug}.jpg`}
+                    alt={category.title}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onerror="this.onerror=null; this.src='/images/placeholder-category.svg';"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent lg:bg-gradient-to-r"></div>
+                </a>
+                
+                <!-- Category Info -->
+                <div class="p-6 lg:p-8 flex flex-col justify-center">
+                  <h2 class="font-serif text-2xl lg:text-3xl font-bold text-stone-800 mb-3">
+                    <a href={`/category/${category.slug}/`} class="hover:text-[#5e6d50] transition-colors">
+                      {category.title}
+                    </a>
+                  </h2>
+                  <p class="text-stone-600 mb-4">
+                    {category.description}
+                  </p>
+                  <p class="text-sm text-stone-500 mb-6">
+                    {categoryProducts.length} products
+                  </p>
+                  <a 
+                    href={`/category/${category.slug}/`}
+                    class="inline-flex items-center self-start bg-[#5e6d50] hover:bg-[#4a5641] text-white font-medium py-2.5 px-6 rounded-lg transition-colors"
+                  >
+                    Browse {category.title}
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="py-12 lg:py-16 bg-stone-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-2xl lg:text-3xl font-bold text-stone-800 mb-4">
+        Not Sure Where to Start?
+      </h2>
+      <p class="text-stone-600 mb-8">
+        Check out our organization guides for step-by-step help transforming any room.
+      </p>
+      <a href="/guides/" class="inline-flex items-center justify-center bg-[#5e6d50] hover:bg-[#4a5641] text-white font-semibold py-3 px-8 rounded-xl transition-colors">
+        Browse Guides
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

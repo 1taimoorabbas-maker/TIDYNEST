@@ -1,0 +1,327 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import siteData from '../../data/site.json';
+import categoriesData from '../../data/categories.json';
+import productsData from '../../data/products.json';
+import guidesData from '../../data/guides.json';
+import { 
+  amazonUrlFromAsin, 
+  productImagePath, 
+  getBadgeInfo, 
+  getCategoryBySlug,
+  getRelatedProducts,
+  getGuidesByCategory
+} from '../../lib/helpers';
+
+export function getStaticPaths() {
+  const { products } = productsData;
+  
+  return products.map(product => ({
+    params: { slug: product.slug },
+    props: { product }
+  }));
+}
+
+const { product } = Astro.props;
+const { products } = productsData;
+const { guides } = guidesData;
+
+const category = getCategoryBySlug(categoriesData.categories, product.categorySlug);
+const affiliateUrl = amazonUrlFromAsin(product.asin);
+const imagePath = productImagePath(product.slug);
+const badgeInfo = product.badge ? getBadgeInfo(product.badge) : null;
+const relatedProducts = getRelatedProducts(products, product, 4);
+const relatedGuides = getGuidesByCategory(guides, product.categorySlug).slice(0, 2);
+
+const title = `${product.title} - ${siteData.siteName}`;
+const description = product.shortDescription;
+const pathname = `/product/${product.slug}/`;
+const productOgImage = `/images/products/${product.slug}.jpg`;
+const productOgImageFile = path.join(process.cwd(), 'public', productOgImage.replace(/^\//, ''));
+
+const ogImage = fs.existsSync(productOgImageFile)
+  ? productOgImage
+  : (category ? `/images/categories/${category.slug}.jpg` : '/images/og-default.svg');
+
+// Pros and Cons (derived from bullets for demo)
+const pros = product.bullets.slice(0, 3);
+const cons = ["Check current availability", "Verify dimensions for your space"];
+---
+
+<BaseLayout title={title} description={description} pathname={pathname} ogImage={ogImage} ogType="product">
+  <!-- Breadcrumb -->
+  <section class="bg-stone-50 border-b border-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <nav class="flex items-center text-sm text-stone-500 overflow-x-auto whitespace-nowrap">
+        <a href="/" class="hover:text-[#5e6d50] transition-colors">Home</a>
+        <svg class="w-4 h-4 mx-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        {category && (
+          <>
+            <a href={`/category/${category.slug}/`} class="hover:text-[#5e6d50] transition-colors">{category.title}</a>
+            <svg class="w-4 h-4 mx-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </>
+        )}
+        <span class="text-stone-800 truncate">{product.title}</span>
+      </nav>
+    </div>
+  </section>
+  
+  <!-- Product Hero - Above Fold -->
+  <section class="py-8 lg:py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <!-- Product Image -->
+        <div class="relative">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-stone-100 shadow-lg">
+            <img 
+              src={imagePath}
+              alt={product.alt}
+              class="w-full h-full object-cover"
+              onerror="this.onerror=null; this.src='/images/placeholder-product.svg';"
+            >
+          </div>
+          {badgeInfo && (
+            <span class={`absolute top-4 left-4 ${badgeInfo.color} text-white text-sm font-semibold px-4 py-1.5 rounded-full shadow-lg`}>
+              {badgeInfo.label}
+            </span>
+          )}
+          
+          <!-- Pinterest Save Button -->
+          <a 
+            href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(siteData.siteDomain + pathname)}&media=${encodeURIComponent(siteData.siteDomain + ogImage)}&description=${encodeURIComponent(product.title)}`}
+            target="_blank"
+            rel="noopener"
+            class="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors"
+            aria-label="Save to Pinterest"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0a12 12 0 0 0-4.373 23.178c-.07-.937-.134-2.377.028-3.401.146-.926.943-5.893.943-5.893s-.24-.481-.24-1.192c0-1.117.648-1.951 1.454-1.951.686 0 1.017.515 1.017 1.132 0 .69-.439 1.72-.666 2.677-.19.8.402 1.452 1.192 1.452 1.43 0 2.529-1.508 2.529-3.684 0-1.926-1.384-3.273-3.36-3.273-2.29 0-3.633 1.716-3.633 3.493 0 .691.266 1.432.599 1.834a.24.24 0 0 1 .056.23c-.061.254-.197.8-.224.912-.035.146-.116.178-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A12 12 0 1 0 12 0z"/>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Product Info -->
+        <div class="flex flex-col">
+          {category && (
+            <a href={`/category/${category.slug}/`} class="text-[#5e6d50] text-sm font-medium hover:underline mb-2">
+              {category.title}
+            </a>
+          )}
+          
+          <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
+            {product.title}
+          </h1>
+          
+          <p class="text-lg text-stone-600 mb-6">
+            {product.shortDescription}
+          </p>
+          
+          <!-- Key Features -->
+          <div class="mb-6">
+            <h2 class="font-semibold text-stone-800 mb-3">Key Features:</h2>
+            <ul class="space-y-2">
+              {product.bullets.map(bullet => (
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[#5e6d50] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-stone-600">{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <!-- CTA Button 1 -->
+          <div class="space-y-3 mb-6">
+            <a 
+              href={affiliateUrl}
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="flex items-center justify-center w-full bg-[#5e6d50] hover:bg-[#4a5641] text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg shadow-[#5e6d50]/25"
+            >
+              Check Today's Price on Amazon
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+            <p class="text-xs text-stone-400 text-center">*Affiliate link. We may earn a commission at no extra cost to you.</p>
+          </div>
+          
+          <!-- Best For -->
+          <div class="bg-stone-50 rounded-xl p-4 border border-stone-200">
+            <h3 class="font-semibold text-stone-800 mb-2 flex items-center">
+              <svg class="w-5 h-5 text-[#5e6d50] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Best For:
+            </h3>
+            <p class="text-stone-600 text-sm">
+              {category ? `Anyone looking to organize their ${category.title.toLowerCase().replace(' organization', '')} with a quality, reliable solution.` : 'Home organization enthusiasts looking for effective solutions.'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pros & Cons -->
+  <section class="py-10 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl font-bold text-stone-800 text-center mb-8">
+        Pros & Cons
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Pros -->
+        <div class="bg-white rounded-xl p-6 border border-emerald-200">
+          <h3 class="font-semibold text-emerald-700 mb-4 flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+            </svg>
+            What We Love
+          </h3>
+          <ul class="space-y-3">
+            {pros.map(pro => (
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-stone-600 text-sm">{pro}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <!-- Cons -->
+        <div class="bg-white rounded-xl p-6 border border-amber-200">
+          <h3 class="font-semibold text-amber-700 mb-4 flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            Things to Consider
+          </h3>
+          <ul class="space-y-3">
+            {cons.map(con => (
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-amber-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-stone-600 text-sm">{con}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl font-bold text-stone-800 text-center mb-8">
+        Frequently Asked Questions
+      </h2>
+      
+      <div class="space-y-4">
+        <details class="group bg-stone-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-medium text-stone-800 hover:bg-stone-100 transition-colors">
+            Is this product worth the price?
+            <svg class="w-5 h-5 text-stone-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5 text-stone-600">
+            Based on our research and customer reviews, the {product.title} offers excellent value for its category. It's well-made and delivers on its promises for home organization.
+          </div>
+        </details>
+        
+        <details class="group bg-stone-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-medium text-stone-800 hover:bg-stone-100 transition-colors">
+            How do I know if this will fit my space?
+            <svg class="w-5 h-5 text-stone-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5 text-stone-600">
+            We recommend checking the product dimensions on Amazon before purchasing. Measure your available space and compare it to the product specifications listed on the product page.
+          </div>
+        </details>
+        
+        <details class="group bg-stone-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-medium text-stone-800 hover:bg-stone-100 transition-colors">
+            What if I'm not satisfied with my purchase?
+            <svg class="w-5 h-5 text-stone-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-5 pb-5 text-stone-600">
+            Amazon offers easy returns on most products. Check the return policy on the product page for specific details about this item.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Second CTA -->
+  <section class="py-10 bg-gradient-to-br from-[#5e6d50] to-[#4a5641]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-2xl font-bold text-white mb-4">
+        Ready to Get Organized?
+      </h2>
+      <p class="text-white/80 mb-6">
+        Click below to check current availability and pricing on Amazon.
+      </p>
+      <a 
+        href={affiliateUrl}
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        class="inline-flex items-center justify-center bg-white hover:bg-stone-100 text-[#5e6d50] font-semibold py-4 px-10 rounded-xl transition-colors text-lg shadow-lg"
+      >
+        View on Amazon
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+      <p class="text-white/60 text-xs mt-3">*Affiliate link</p>
+    </div>
+  </section>
+  
+  <!-- Related Guides -->
+  {relatedGuides.length > 0 && (
+    <section class="py-12 bg-stone-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-serif text-2xl font-bold text-stone-800 text-center mb-8">
+          Related Guides
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {relatedGuides.map(guide => (
+            <GuideCard guide={guide} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+  
+  <!-- Related Products -->
+  {relatedProducts.length > 0 && (
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-serif text-2xl font-bold text-stone-800 text-center mb-8">
+          You Might Also Like
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+          {relatedProducts.map(relProduct => (
+            <ProductCard product={relProduct} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

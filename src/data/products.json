@@ -1,0 +1,840 @@
+{
+  "products": [
+    {
+      "title": "360° Rotating Craft Caddy Organizer",
+      "slug": "rotating-craft-caddy",
+      "categorySlug": "craft-room",
+      "asin": "B0DK3GP1TM",
+      "shortDescription": "Keep all your crafting essentials within arm's reach with this spinning desktop organizer featuring multiple compartments.",
+      "badge": "top-pick",
+      "bullets": [
+        "360-degree rotation for easy access to all supplies",
+        "6 removable cups and multiple compartments",
+        "Sturdy bamboo construction with modern design",
+        "Perfect for markers, scissors, tape, and small tools",
+        "Non-slip base protects surfaces"
+      ],
+      "alt": "Rotating bamboo craft supply organizer with multiple compartments holding markers and scissors"
+    },
+    {
+      "title": "Pegboard Wall Organizer Kit",
+      "slug": "pegboard-wall-organizer",
+      "categorySlug": "craft-room",
+      "asin": "B0D4Z4CTKJ",
+      "shortDescription": "Customizable pegboard system with hooks, shelves, and baskets to organize craft supplies vertically and save desk space.",
+      "badge": "editor-pick",
+      "bullets": [
+        "Includes 2 pegboard panels and 15+ accessories",
+        "Easy wall mounting with included hardware",
+        "Mix and match hooks, baskets, and shelves",
+        "Powder-coated steel in modern matte finish",
+        "Holds up to 50 lbs total weight",
+        "Perfect for small spaces and apartments"
+      ],
+      "alt": "White pegboard organizer mounted on wall with craft supplies neatly arranged"
+    },
+    {
+      "title": "Stackable Thread Organizer Rack",
+      "slug": "thread-organizer-rack",
+      "categorySlug": "craft-room",
+      "asin": "B01IFYJTTU",
+      "shortDescription": "Keep thread spools visible and tangle-free with this clear acrylic organizer that holds 60+ spools.",
+      "badge": "budget",
+      "bullets": [
+        "Holds up to 60 standard thread spools",
+        "Clear acrylic for easy color identification",
+        "Stackable design saves space",
+        "Wall-mount or tabletop display options"
+      ],
+      "alt": "Clear acrylic thread organizer filled with colorful thread spools"
+    },
+    {
+      "title": "3-Tier Rolling Utility Cart for Craft Supplies",
+      "slug": "rolling-utility-cart-craft",
+      "categorySlug": "craft-room",
+      "asin": "B0CRGNKHVW",
+      "shortDescription": "A slim rolling cart that keeps your most-used tools and supplies organized and mobile—perfect beside a desk or cutting table.",
+      "badge": "top-pick",
+      "bullets": [
+        "3 tiers to sort supplies by project or category",
+        "Smooth-rolling wheels with lock option",
+        "Slim footprint fits small craft rooms",
+        "Great for vinyl, paint, glue, and tools",
+        "Easy wipe-clean shelves"
+      ],
+      "alt": "White rolling craft cart with three tiers holding jars of paint, tools, and craft supplies"
+    },
+    {
+      "title": "Vinyl Roll Holder Rack (Wall or Desk)",
+      "slug": "vinyl-roll-holder-rack",
+      "categorySlug": "craft-room",
+      "asin": "B0DHXH39BB",
+      "shortDescription": "Stop the roll avalanche. Store vinyl rolls upright and visible so you can grab the right color fast.",
+      "badge": "editor-pick",
+      "bullets": [
+        "Keeps rolls separated and easy to see",
+        "Vertical storage saves shelf space",
+        "Works for vinyl, wrapping paper, and kraft rolls",
+        "Sturdy metal frame with modern look",
+        "Helps prevent creases and crushing"
+      ],
+      "alt": "Metal vinyl roll holder organizer with colorful rolls stored upright"
+    },
+    {
+      "title": "Clear Stackable Drawer Organizer Set for Craft Tools",
+      "slug": "clear-drawer-organizer-set-craft",
+      "categorySlug": "craft-room",
+      "asin": "B0D485L2X2",
+      "shortDescription": "Create a “everything has a home” setup with modular clear bins for scissors, pens, rulers, and small tools.",
+      "badge": "top-pick",
+      "bullets": [
+        "Multiple bin sizes to mix and match",
+        "Clear plastic makes items easy to find",
+        "Non-slip bottom helps prevent shifting",
+        "Perfect for desks, drawers, and carts",
+        "Easy to rinse and wipe clean"
+      ],
+      "alt": "Clear drawer organizer bins holding pens, scissors, rulers, and craft tools"
+    },
+    {
+      "title": "Stackable Clear Storage Drawers (Desktop Unit)",
+      "slug": "stackable-clear-storage-drawers-desktop",
+      "categorySlug": "craft-room",
+      "asin": "B0CXLK9PJ9",
+      "shortDescription": "A compact drawer unit for beads, stickers, washi, and small supplies—great for keeping clutter off your work surface.",
+      "badge": "premium",
+      "bullets": [
+        "Smooth sliding drawers for quick access",
+        "Stackable design grows with your stash",
+        "Clear drawers show what’s inside instantly",
+        "Works for craft, office, or vanity storage",
+        "Keeps small items from getting lost"
+      ],
+      "alt": "Clear plastic desktop drawers used to store small craft supplies like beads and stickers"
+    },
+    {
+      "title": "Label Maker for Craft Room Bins and Drawers",
+      "slug": "label-maker-craft-room",
+      "categorySlug": "craft-room",
+      "asin": "B0CHJR142G",
+      "shortDescription": "A simple label maker turns messy “misc” bins into an easy-to-maintain craft room system that stays organized.",
+      "badge": "trending",
+      "bullets": [
+        "Creates crisp labels for bins, drawers, and shelves",
+        "Makes cleanup faster for the whole household",
+        "Great for pantry-style craft organization",
+        "Helps maintain categories long-term",
+        "Ideal for clear bins and open shelving"
+      ],
+      "alt": "Handheld label maker next to neatly labeled clear bins on a craft shelf"
+    },
+    {
+      "title": "Washi Tape Organizer and Dispenser",
+      "slug": "washi-tape-organizer-dispenser",
+      "categorySlug": "craft-room",
+      "asin": "B0G6K4XMPB",
+      "shortDescription": "Keep washi rolls visible, sorted, and easy to cut—no more digging through a drawer mid-project.",
+      "badge": "budget",
+      "bullets": [
+        "Holds multiple washi rolls in one spot",
+        "Easy-access dispenser style",
+        "Prevents rolls from unraveling",
+        "Compact footprint for desktops",
+        "Great for journaling and gift wrap stations"
+      ],
+      "alt": "Washi tape organizer with multiple patterned tape rolls arranged neatly"
+    },
+    {
+      "title": "Acrylic Marker Organizer Stand (Desktop)",
+      "slug": "acrylic-marker-organizer-stand",
+      "categorySlug": "craft-room",
+      "asin": "B0C58MCR4C",
+      "shortDescription": "A clear stand that stores markers upright so colors stay visible and you can grab what you need in seconds.",
+      "badge": "top-pick",
+      "bullets": [
+        "Upright storage keeps tips consistent",
+        "Clear acrylic shows colors at a glance",
+        "Multiple slots for markers and pens",
+        "Keeps desk tidy and reduces clutter",
+        "Great for markers, pens, and brushes"
+      ],
+      "alt": "Clear acrylic marker organizer holding markers upright by color"
+    },
+    {
+      "title": "Craft Paper Organizer for 12x12 Scrapbook Sheets",
+      "slug": "craft-paper-organizer-12x12",
+      "categorySlug": "craft-room",
+      "asin": "B08V21RXFY",
+      "shortDescription": "Store cardstock and scrapbook paper flat and sorted so you can actually see what you own (and use it).",
+      "badge": "editor-pick",
+      "bullets": [
+        "Sized for 12x12 scrapbook paper",
+        "Keeps sheets flat to reduce bending",
+        "Sort by color, theme, or project",
+        "Makes planning and pulling materials faster",
+        "Works well on shelves or in cubbies"
+      ],
+      "alt": "Scrapbook paper organizer storing 12x12 sheets sorted by color"
+    },
+    {
+      "title": "Portable Project Storage Case with Dividers",
+      "slug": "portable-project-storage-case-dividers",
+      "categorySlug": "craft-room",
+      "asin": "B0BDNDKX3X",
+      "shortDescription": "A lidded case to keep one project together—perfect for WIPs so you can clean up fast without losing pieces.",
+      "badge": "top-pick",
+      "bullets": [
+        "Removable dividers for custom sections",
+        "Lidded design keeps supplies contained",
+        "Easy carry handle for moving projects",
+        "Great for beads, notions, and small parts",
+        "Helps keep works-in-progress organized"
+      ],
+      "alt": "Portable craft storage case with adjustable dividers holding small craft supplies"
+    },
+    {
+      "title": "Drawer Dividers for Deep Craft Drawers",
+      "slug": "drawer-dividers-deep-drawers",
+      "categorySlug": "craft-room",
+      "asin": "B0D5Y391WS",
+      "shortDescription": "Turn one messy deep drawer into neat zones for tools, adhesives, cutting supplies, and small containers.",
+      "badge": "budget",
+      "bullets": [
+        "Create sections to prevent pile-ups",
+        "Adjustable fit for different drawer sizes",
+        "Great for tools, rulers, tape, and glue",
+        "Helps keep categories separated",
+        "Quick way to upgrade any drawer"
+      ],
+      "alt": "Adjustable drawer dividers creating organized sections in a deep craft drawer"
+    },
+    {
+      "title": "Magnetic Tool Strip for Scissors and Metal Tools",
+      "slug": "magnetic-tool-strip-craft",
+      "categorySlug": "craft-room",
+      "asin": "B0921NX1WJ",
+      "shortDescription": "Free up drawer space by storing frequently used metal tools on a wall-mounted magnetic strip near your workspace.",
+      "badge": "trending",
+      "bullets": [
+        "Keeps tools visible and easy to grab",
+        "Mounts near desk or cutting station",
+        "Great for scissors, tweezers, and snips",
+        "Reduces desktop clutter",
+        "Helps keep sharp tools safely stored"
+      ],
+      "alt": "Wall-mounted magnetic strip holding metal craft tools like scissors and tweezers"
+    },
+    {
+      "title": "Stackable Storage Bins with Front Open Access",
+      "slug": "stackable-front-open-bins-craft",
+      "categorySlug": "craft-room",
+      "asin": "B0CGJJJC4M",
+      "shortDescription": "Front-opening bins let you stack vertically but still grab supplies without unstacking everything—ideal for a craft closet.",
+      "badge": "premium",
+      "bullets": [
+        "Front door access for easy grabbing",
+        "Stackable to maximize vertical space",
+        "Great for fabric, blanks, and bulk supplies",
+        "Keeps shelves looking tidy and uniform",
+        "Works in closets and open shelving"
+      ],
+      "alt": "Stackable front-open storage bins on a shelf used for craft supplies"
+    },
+    {
+      "title": "Floating Wall Shelves for a Craft Station (Set)",
+      "slug": "floating-wall-shelves-craft-station",
+      "categorySlug": "craft-room",
+      "asin": "B0BBFXCWFJ",
+      "shortDescription": "Add vertical storage above your desk for jars, small bins, and display-worthy supplies—without taking up tabletop space.",
+      "badge": "editor-pick",
+      "bullets": [
+        "Creates extra storage without a bigger desk",
+        "Perfect for small bins and jars",
+        "Keeps essentials within reach",
+        "Helps style your craft space neatly",
+        "Great for renters with appropriate anchors"
+      ],
+      "alt": "Floating shelves above a craft desk holding jars and small labeled bins"
+    },
+    {
+      "title": "Airtight Pantry Container Set (14-Piece)",
+      "slug": "airtight-pantry-containers",
+      "categorySlug": "pantry",
+      "asin": "B08NDJNDNY",
+      "shortDescription": "BPA-free containers with flip-lock lids keep dry goods fresh longer. Includes labels and marker for easy identification.",
+      "badge": "top-pick",
+      "bullets": [
+        "14 containers in 4 different sizes",
+        "Airtight flip-lock lids with silicone seal",
+        "BPA-free, food-safe plastic",
+        "Includes 24 chalkboard labels and marker",
+        "Stackable design maximizes shelf space",
+        "Dishwasher safe for easy cleaning"
+      ],
+      "alt": "Set of clear airtight containers filled with pasta, cereal, and dry goods on pantry shelf"
+    },
+    {
+      "title": "Expandable Cabinet Shelf Organizers (4-Pack)",
+      "slug": "expandable-shelf-organizers",
+      "categorySlug": "pantry",
+      "asin": "B0DSVG5PW6",
+      "shortDescription": "Double your cabinet space with these adjustable risers. Perfect for cans, spices, and small jars.",
+      "badge": "budget",
+      "bullets": [
+        "Expands from 15\" to 25\" wide",
+        "Sturdy metal construction holds 20 lbs each",
+        "Non-slip coating protects shelves",
+        "Set of 4 for multiple cabinets"
+      ],
+      "alt": "Expandable wire shelf organizer in cabinet with canned goods displayed on two levels"
+    },
+    {
+      "title": "Lazy Susan Turntable Organizer Set",
+      "slug": "lazy-susan-turntable-set",
+      "categorySlug": "pantry",
+      "asin": "B0CNCWY7N6",
+      "shortDescription": "Set of 3 turntables in different sizes to organize condiments, spices, and bottles in cabinets or on counters.",
+      "badge": "trending",
+      "bullets": [
+        "Set includes 9\", 12\", and 15\" turntables",
+        "Smooth 360-degree rotation",
+        "Raised edge prevents items from sliding",
+        "BPA-free plastic, easy to clean",
+        "Perfect for corner cabinets and fridges"
+      ],
+      "alt": "Three lazy susan turntables holding condiments and spices in a pantry cabinet"
+    },
+    
+{
+  "title": "Clear Stackable Pantry Bins (Set)",
+  "slug": "clear-stackable-pantry-bins-set",
+  "categorySlug": "pantry",
+  "asin": "B0B46NPJY9",
+  "shortDescription": "Instantly clean up snack and packet chaos with uniform, easy-pull bins for deep pantry shelves.",
+  "badge": "top-pick",
+  "bullets": [
+    "Pull-out bins make deep shelves usable",
+    "Great for snacks, packets, and pouches",
+    "Creates clear categories fast",
+    "Easy to restock and maintain",
+    "Looks clean and consistent"
+  ],
+  "alt": "Clear pantry bins organizing snacks and packets on a shelf"
+},
+{
+  "title": "Pantry Label Set (Minimal Style)",
+  "slug": "pantry-label-set-minimal",
+  "categorySlug": "pantry",
+  "asin": "B08LCRVGLG",
+  "shortDescription": "Clean labels that make it easy for everyone to keep your pantry system tidy.",
+  "badge": "editor-pick",
+  "bullets": [
+    "Makes categories obvious and maintainable",
+    "Pairs well with clear bins and containers",
+    "Reduces 'where does this go?' clutter",
+    "Creates a premium pantry look",
+    "Fast refresh for any pantry"
+  ],
+  "alt": "Minimal pantry labels on clear containers and bins"
+},
+{
+  "title": "Can Dispenser Organizer (Shelf-Friendly)",
+  "slug": "can-dispenser-organizer",
+  "categorySlug": "pantry",
+  "asin": "B01IIXR2II",
+  "shortDescription": "Keeps cans rotated and visible so you stop buying duplicates and reduce back-of-shelf clutter.",
+  "badge": "budget",
+  "bullets": [
+    "FIFO-style rotation helps use older cans first",
+    "Prevents cans from toppling",
+    "Makes shelf space more efficient",
+    "Easy to see inventory at a glance",
+    "Great for meal-prep staples"
+  ],
+  "alt": "Pantry can dispenser organizer holding multiple canned goods on a shelf"
+},
+{
+  "title": "Over-the-Door Pantry Organizer Rack",
+  "slug": "over-the-door-pantry-organizer-rack",
+  "categorySlug": "pantry",
+  "asin": "B0BX7PKKKQ",
+  "shortDescription": "Add vertical storage for snacks, wraps, and packets—perfect when cabinet space is tight.",
+  "badge": "trending",
+  "bullets": [
+    "Adds storage without remodeling",
+    "Great for renters",
+    "Keeps small items visible",
+    "Helps prevent pantry overflow",
+    "Easy install on most doors"
+  ],
+  "alt": "Over the door pantry organizer holding snacks and packets"
+},
+{
+  "title": "Tiered Spice Rack (Cabinet or Counter)",
+  "slug": "tiered-spice-rack-cabinet-counter",
+  "categorySlug": "pantry",
+  "asin": "B0FN415QMQ",
+  "shortDescription": "Tiered risers make spices visible so you stop digging and rebuying what you already have.",
+  "badge": "budget",
+  "bullets": [
+    "Creates visibility in cabinets",
+    "Works for spices, vitamins, small jars",
+    "Reduces clutter and duplicates",
+    "Easy to wipe clean",
+    "Makes cooking faster"
+  ],
+  "alt": "Tiered spice rack displaying spices in a pantry cabinet"
+},
+{
+  "title": "Snack Organizer Bins (Kid-Friendly Categories)",
+  "slug": "snack-organizer-bins-kid-friendly",
+  "categorySlug": "pantry",
+  "asin": "B0BVT6KBVV",
+  "shortDescription": "A simple bin system for grab-and-go snacks that keeps your pantry from turning into chaos.",
+  "badge": "top-pick",
+  "bullets": [
+    "Easy categories: bars, chips, fruit snacks",
+    "Faster restocks",
+    "Great for busy families",
+    "Helps reduce clutter and mess",
+    "Works on shelves or in drawers"
+  ],
+  "alt": "Snack organizer bins in pantry holding bars and packaged snacks"
+},
+{
+  "title": "Cereal Containers Set (Pour-Friendly)",
+  "slug": "cereal-containers-set-pour-friendly",
+  "categorySlug": "pantry",
+  "asin": "B0CZ1MGZGG",
+  "shortDescription": "Pour-friendly containers reduce box clutter and keep cereal fresher and easier to serve.",
+  "badge": "premium",
+  "bullets": [
+    "Reduces bulky boxes",
+    "Easy-pour design",
+    "Keeps cereal fresher longer",
+    "Looks uniform on shelves",
+    "Great with labels"
+  ],
+  "alt": "Cereal stored in clear pour-friendly containers on pantry shelf"
+},
+{
+  "title": "Non-Slip Shelf Liner (Pantry + Cabinets)",
+  "slug": "non-slip-shelf-liner-pantry-cabinets",
+  "categorySlug": "pantry",
+  "asin": "B08BZ6NKZB",
+  "shortDescription": "Prevents bins and containers from sliding while protecting shelves from spills and crumbs.",
+  "badge": "budget",
+  "bullets": [
+    "Keeps bins from shifting",
+    "Protects shelves from spills",
+    "Easy to cut to size",
+    "Makes cleanup faster",
+    "Works in pantry and fridge"
+  ],
+  "alt": "Non slip shelf liner used under pantry containers and bins"
+},
+{
+  "title": "2-Tier Turntable Organizer (Oils + Sauces)",
+  "slug": "two-tier-turntable-organizer-oils-sauces",
+  "categorySlug": "pantry",
+  "asin": "B0FH424338",
+  "shortDescription": "A two-level turntable adds vertical space and makes deep shelves easier to use for bottles and jars.",
+  "badge": "editor-pick",
+  "bullets": [
+    "Adds a second level of storage",
+    "Great for oils, sauces, and jars",
+    "Improves access on deep shelves",
+    "Keeps categories together",
+    "Easy to wipe clean"
+  ],
+  "alt": "Two tier turntable organizer holding oils and sauces inside a pantry cabinet"
+},
+    {
+      "title": "Velvet Non-Slip Hangers (60-Pack)",
+      "slug": "velvet-hangers-50pack",
+      "categorySlug": "closet",
+      "asin": "B07GYLFFVR",
+      "shortDescription": "Space-saving slim hangers with velvet coating prevent clothes from slipping. Uniform look creates an organized closet.",
+      "badge": "top-pick",
+      "bullets": [
+        "60 hangers in neutral gray color",
+        "Ultra-slim profile saves 50% more space",
+        "Velvet coating prevents slipping",
+        "360-degree swivel chrome hooks",
+        "Holds up to 10 lbs per hanger",
+        "Notches for strappy tops and dresses"
+      ],
+      "alt": "Gray velvet hangers holding organized clothes in a neat closet"
+    },
+    {
+      "title": "Hanging Closet Organizer with Drawers",
+      "slug": "hanging-closet-organizer",
+      "categorySlug": "closet",
+      "asin": "B09PVBKT7N",
+      "shortDescription": "Maximize vertical space with this 6-shelf hanging organizer featuring 2 pull-out drawers for small items.",
+      "badge": "editor-pick",
+      "bullets": [
+        "6 shelves plus 2 fabric drawers",
+        "Reinforced construction prevents sagging",
+        "Velcro straps attach securely to closet rod",
+        "Fits standard closet rods up to 1.5\" diameter",
+        "Side pockets for accessories",
+        "Folds flat for easy storage"
+      ],
+      "alt": "Beige hanging closet organizer with sweaters and accessories neatly folded on shelves"
+    },
+    {
+      "title": "Acrylic Shelf Dividers (6-Pack)",
+      "slug": "acrylic-shelf-dividers",
+      "categorySlug": "closet",
+      "asin": "B0BMTKGDZZ",
+      "shortDescription": "Keep folded clothes, purses, and sweaters in neat stacks with these crystal-clear shelf dividers.",
+      "badge": "premium",
+      "bullets": [
+        "Set of 6 clear acrylic dividers",
+        "Fits shelves up to 1\" thick",
+        "No installation required - slides on",
+        "Elegant, invisible organization",
+        "Also great for books and purses"
+      ],
+      "alt": "Clear acrylic shelf dividers separating stacks of folded sweaters on closet shelf"
+    },
+    {
+  "title": "Clear Shoe Boxes (Stackable Set)",
+  "slug": "clear-shoe-boxes-stackable-set",
+  "categorySlug": "closet",
+  "asin": "B0B42B6NZF",
+  "shortDescription": "Stackable clear shoe boxes keep pairs visible, dust-free, and easy to grab without digging.",
+  "badge": "premium",
+  "bullets": [
+    "Clear design makes shoes easy to find",
+    "Stackable to save shelf space",
+    "Keeps shoes dust-free and protected",
+    "Creates a boutique-clean look",
+    "Great for small closets"
+  ],
+  "alt": "Stackable clear shoe boxes neatly organized on a closet shelf"
+},
+{
+  "title": "Under-Bed Storage Bags (Clear Window)",
+  "slug": "under-bed-storage-bags-clear-window",
+  "categorySlug": "closet",
+  "asin": "B094J8QKF3",
+  "shortDescription": "Store off-season clothes and bedding under the bed without bulky bins or messy piles.",
+  "badge": "budget",
+  "bullets": [
+    "Uses hidden space efficiently",
+    "Clear window for quick identification",
+    "Great for sweaters, linens, and seasonal items",
+    "Zipper closure helps keep dust out",
+    "Easy carry handles"
+  ],
+  "alt": "Under bed storage bags used for seasonal clothing and bedding organization"
+},
+{
+  "title": "Belt & Scarf Hanger (Multi-Loop)",
+  "slug": "belt-scarf-hanger-multi-loop",
+  "categorySlug": "closet",
+  "asin": "B0BTWDNY8P",
+  "shortDescription": "Hang belts and scarves vertically so accessories stay visible and don’t tangle in drawers.",
+  "badge": "trending",
+  "bullets": [
+    "Prevents tangles and mess",
+    "Saves drawer space",
+    "Easy to see everything at a glance",
+    "Works for belts, scarves, ties",
+    "Quick outfit selection"
+  ],
+  "alt": "Multi loop hanger organizing belts and scarves neatly in a closet"
+},
+{
+  "title": "Space-Saving Pants Hanger (Multi-Tier)",
+  "slug": "space-saving-pants-hanger-multi-tier",
+  "categorySlug": "closet",
+  "asin": "B08RCCP3HV",
+  "shortDescription": "A multi-tier hanger that stores multiple pants in one spot to free up rod space.",
+  "badge": "editor-pick",
+  "bullets": [
+    "Stores multiple pants vertically",
+    "Saves closet rod space",
+    "Keeps jeans and trousers easy to grab",
+    "Helps reduce wrinkles",
+    "Great for small closets"
+  ],
+  "alt": "Multi tier pants hanger organizing several pairs of pants in a closet"
+},
+{
+  "title": "Closet Shelf Bins (Fabric, Label-Friendly)",
+  "slug": "closet-shelf-bins-fabric-label-friendly",
+  "categorySlug": "closet",
+  "asin": "B0BR7MSWN2",
+  "shortDescription": "Soft bins create clean categories for sweaters, bags, and accessories—especially on open shelves.",
+  "badge": "top-pick",
+  "bullets": [
+    "Instantly reduces visual clutter",
+    "Easy categories for accessories and clothing",
+    "Looks uniform on shelves",
+    "Label-friendly front",
+    "Collapsible when not in use"
+  ],
+  "alt": "Fabric closet shelf bins creating neat categories on a closet shelf"
+},
+{
+  "title": "Hanging Jewelry Organizer (Clear Pockets)",
+  "slug": "hanging-jewelry-organizer-clear-pockets",
+  "categorySlug": "closet",
+  "asin": "B01CPHFN34",
+  "shortDescription": "Keep jewelry visible and untangled with clear pockets that hang on the closet rod or door.",
+  "badge": "budget",
+  "bullets": [
+    "Clear pockets for quick visibility",
+    "Reduces tangles and lost pieces",
+    "Hangs on closet rod or door",
+    "Great for travel too",
+    "Frees up drawer space"
+  ],
+  "alt": "Hanging jewelry organizer with clear pockets storing earrings and accessories"
+},
+{
+  "title": "Purse Organizer (Shelf Divider Style)",
+  "slug": "purse-organizer-shelf-divider-style",
+  "categorySlug": "closet",
+  "asin": "B0CBJJ73LB",
+  "shortDescription": "Keeps handbags upright and separated so shelves stay neat and purses don’t slump into a pile.",
+  "badge": "premium",
+  "bullets": [
+    "Separates handbags neatly",
+    "Prevents slumping and damage",
+    "Creates a clean shelf look",
+    "Easy to reposition",
+    "Great for clutches too"
+  ],
+  "alt": "Shelf purse organizer keeping handbags upright and separated on a closet shelf"
+},
+{
+  "title": "Over-the-Door Hooks (Heavy Duty Set)",
+  "slug": "over-the-door-hooks-heavy-duty-set",
+  "categorySlug": "closet",
+  "asin": "B0B99VKV8P",
+  "shortDescription": "Add instant hanging space for bags, hoodies, and accessories without drilling.",
+  "badge": "budget",
+  "bullets": [
+    "No drilling required",
+    "Adds instant hanging space",
+    "Great for bags, jackets, and hats",
+    "Helps keep floors clear",
+    "Works in closets and bedrooms"
+  ],
+  "alt": "Over the door hooks used to hang bags and jackets for organization"
+},
+{
+  "title": "Vacuum Storage Bags (Seasonal Clothing)",
+  "slug": "vacuum-storage-bags-seasonal-clothing",
+  "categorySlug": "closet",
+  "asin": "B0973DGD8P",
+  "shortDescription": "Compress bulky seasonal items to free up shelf and drawer space fast.",
+  "badge": "top-pick",
+  "bullets": [
+    "Compresses bulky clothing and bedding",
+    "Frees up closet space quickly",
+    "Great for under-bed storage",
+    "Helps protect items from dust",
+    "Ideal for seasonal rotation"
+  ],
+  "alt": "Vacuum storage bags used to compress seasonal clothing for closet organization"
+},
+    {
+      "title": "Over-Door Bathroom Organizer",
+      "slug": "over-door-bathroom-organizer",
+      "categorySlug": "bathroom",
+      "asin": "B0BYSGKMP3",
+      "shortDescription": "No-drill storage solution with baskets and hooks for toiletries, towels, and hair tools.",
+      "badge": "top-pick",
+      "bullets": [
+        "3 large baskets plus 6 hooks",
+        "Fits doors up to 2.25\" thick",
+        "Rust-resistant powder-coated steel",
+        "Foam backing protects door finish",
+        "Holds hair dryers, brushes, and more",
+        "No tools or drilling required"
+      ],
+      "alt": "White over-door bathroom organizer with baskets holding toiletries and towels"
+    },
+    {
+      "title": "Under-Sink Expandable Organizer",
+      "slug": "under-sink-organizer",
+      "categorySlug": "bathroom",
+      "asin": "B0D176VGXZ",
+      "shortDescription": "2-tier adjustable organizer designed to fit around pipes and maximize awkward under-sink cabinet space.",
+      "badge": "editor-pick",
+      "bullets": [
+        "Expands from 17\" to 27\" wide",
+        "Adjustable shelves work around pipes",
+        "Includes 4 removable cups for small items",
+        "Heavy-duty steel holds up to 30 lbs",
+        "Easy assembly, no tools needed"
+      ],
+      "alt": "Expandable under-sink organizer with cleaning supplies and toiletries neatly arranged"
+    },
+    {
+      "title": "Bamboo Bathroom Tray Organizer Set",
+      "slug": "bamboo-bathroom-tray-set",
+      "categorySlug": "bathroom",
+      "asin": "B095S8ZJ8D",
+      "shortDescription": "Beautiful bamboo trays for countertop organization. Set of 3 sizes for toiletries, jewelry, and accessories.",
+      "badge": "premium",
+      "bullets": [
+        "Set of 3 nesting trays",
+        "Sustainable bamboo construction",
+        "Water-resistant finish for bathrooms",
+        "Stackable or use separately",
+        "Elegant spa-like aesthetic"
+      ],
+      "alt": "Bamboo bathroom trays holding soap, lotion, and accessories on marble countertop"
+    },
+    {
+  "title": "Under-Sink Sliding Drawer Organizer (2-Tier)",
+  "slug": "under-sink-sliding-drawer-organizer-2-tier",
+  "categorySlug": "bathroom",
+  "asin": "B0FDG8S8SQ",
+  "shortDescription": "Pull-out drawers make under-sink space easy to use—no more losing items in the back.",
+  "badge": "top-pick",
+  "bullets": [
+    "Pull-out access for deep cabinets",
+    "Great for skincare backups and cleaning items",
+    "Creates clear categories fast",
+    "Helps prevent clutter piles",
+    "Easy wipe-clean surfaces"
+  ],
+  "alt": "Two tier sliding drawer organizer used under bathroom sink"
+},
+{
+  "title": "Clear Acrylic Countertop Organizer (Skincare Tray)",
+  "slug": "clear-acrylic-countertop-organizer-skincare-tray",
+  "categorySlug": "bathroom",
+  "asin": "B07QS3J7QQ",
+  "shortDescription": "A simple tray that keeps daily skincare together and prevents messy sink spread.",
+  "badge": "editor-pick",
+  "bullets": [
+    "Creates a clean 'home' for daily items",
+    "Makes counters easy to wipe down",
+    "Looks premium and minimal",
+    "Keeps routines faster and tidier",
+    "Great for small bathrooms"
+  ],
+  "alt": "Clear acrylic tray organizing skincare products on bathroom counter"
+},
+{
+  "title": "Shower Caddy (Rust-Resistant Hanging)",
+  "slug": "shower-caddy-rust-resistant-hanging",
+  "categorySlug": "bathroom",
+  "asin": "B0BNH6Q3XV",
+  "shortDescription": "Keeps shower bottles off the floor edge and makes your shower look instantly cleaner.",
+  "badge": "premium",
+  "bullets": [
+    "Rust-resistant materials",
+    "Holds multiple bottles securely",
+    "Reduces clutter and mess",
+    "Easy access to daily products",
+    "Cleaner-looking shower instantly"
+  ],
+  "alt": "Rust resistant shower caddy holding shampoo and body wash"
+},
+{
+  "title": "Toothbrush Wall Holder (No-Drill)",
+  "slug": "toothbrush-wall-holder-no-drill",
+  "categorySlug": "bathroom",
+  "asin": "B0F74CG76T",
+  "shortDescription": "Free up counter space with a wall-mounted holder that keeps toothbrushes separated and tidy.",
+  "badge": "budget",
+  "bullets": [
+    "Frees counter space",
+    "Keeps toothbrushes separated",
+    "No-drill install option",
+    "Great for families",
+    "Keeps bathroom looking cleaner"
+  ],
+  "alt": "Wall mounted toothbrush holder for bathroom organization"
+},
+{
+  "title": "Cotton Swab & Pad Canisters (Set)",
+  "slug": "cotton-swab-pad-canisters-set",
+  "categorySlug": "bathroom",
+  "asin": "B094J3YVZY",
+  "shortDescription": "A small upgrade that makes bathrooms look spa-like and keeps supplies dust-free.",
+  "badge": "premium",
+  "bullets": [
+    "Looks tidy and elevated",
+    "Keeps supplies dust-free",
+    "Easy refill",
+    "Great for guest bathrooms",
+    "Instant countertop upgrade"
+  ],
+  "alt": "Bathroom canisters holding cotton swabs and cotton pads on a counter"
+},
+{
+  "title": "Hair Tool Organizer (Heat-Resistant Holder)",
+  "slug": "hair-tool-organizer-heat-resistant-holder",
+  "categorySlug": "bathroom",
+  "asin": "B08HQKFRNM",
+  "shortDescription": "Store a dryer, straightener, and brushes safely without messy cords on the counter.",
+  "badge": "trending",
+  "bullets": [
+    "Holds multiple hot tools safely",
+    "Reduces cord clutter",
+    "Keeps tools easy to grab",
+    "Great for small bathrooms",
+    "Creates a tidy morning routine"
+  ],
+  "alt": "Hair tool organizer holding a blow dryer and styling tools in a bathroom"
+},
+{
+  "title": "Medicine Cabinet Shelf Organizer (2-Level)",
+  "slug": "medicine-cabinet-shelf-organizer-2-level",
+  "categorySlug": "bathroom",
+  "asin": "B0CBM9G17J",
+  "shortDescription": "Double usable space in medicine cabinets so small items don’t fall into a pile.",
+  "badge": "budget",
+  "bullets": [
+    "Creates two levels for better visibility",
+    "Great for skincare and small bottles",
+    "Reduces clutter piles",
+    "Makes items easier to find",
+    "Quick install"
+  ],
+  "alt": "Two level shelf organizer inside a bathroom medicine cabinet"
+},
+{
+  "title": "Over-the-Toilet Storage Shelf",
+  "slug": "over-the-toilet-storage-shelf",
+  "categorySlug": "bathroom",
+  "asin": "B0DYMVRN8N",
+  "shortDescription": "Adds vertical storage for towels and baskets without remodeling—perfect for small bathrooms.",
+  "badge": "top-pick",
+  "bullets": [
+    "Adds storage in unused vertical space",
+    "Great for towels and baskets",
+    "Helps keep backups accessible",
+    "Makes small bathrooms feel bigger",
+    "Improves overall tidiness"
+  ],
+  "alt": "Over the toilet storage shelf with baskets and towels in a bathroom"
+},
+{
+  "title": "Bathroom Drawer Organizer Set (Modular)",
+  "slug": "bathroom-drawer-organizer-set-modular",
+  "categorySlug": "bathroom",
+  "asin": "B08461YQ9K",
+  "shortDescription": "Modular organizers for makeup, skincare tools, and small items so drawers stay neat.",
+  "badge": "editor-pick",
+  "bullets": [
+    "Creates clear sections in drawers",
+    "Keeps small items from getting lost",
+    "Easy to mix and match sizes",
+    "Works for vanity or bathroom drawers",
+    "Makes cleanup fast"
+  ],
+  "alt": "Modular drawer organizers used in a bathroom drawer for small items"
+}
+  ]
+}

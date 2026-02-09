@@ -1,0 +1,240 @@
+{
+  "guides": [
+    {
+      "title": "The Ultimate Craft Room Organization Guide",
+      "slug": "ultimate-craft-room-organization",
+      "categorySlug": "craft-room",
+      "description": "Transform your craft room from chaotic to inspiring with our step-by-step organization guide. Learn how to sort supplies, maximize space, and create a functional creative workspace.",
+      "sections": [
+        {
+          "heading": "Start with a Complete Inventory",
+          "paragraphs": [
+            "Before organizing, take everything out and sort items by category: papers, fabrics, tools, adhesives, paints, and embellishments. This helps you see exactly what you have and identify duplicates.",
+            "As you sort, discard dried-out markers, rusty scissors, and supplies you no longer use. Donate usable items to schools or community centers."
+          ],
+          "productSlugs": []
+        },
+        {
+          "heading": "Create Zones for Different Activities",
+          "paragraphs": [
+            "Designate specific areas for cutting, sewing, painting, and general crafting. Keep frequently used supplies within arm's reach of each zone.",
+            "A rotating organizer on your main work surface keeps everyday essentials accessible without cluttering your workspace."
+          ],
+          "productSlugs": ["rotating-craft-caddy"]
+        },
+        {
+          "heading": "Use Vertical Space Wisely",
+          "paragraphs": [
+            "Wall-mounted pegboards and shelving systems free up valuable desk and floor space. They also make supplies visible and easy to grab.",
+            "Pegboard systems are incredibly versatile—you can reconfigure hooks and baskets as your needs change."
+          ],
+          "productSlugs": ["pegboard-wall-organizer", "thread-organizer-rack"]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do I organize craft supplies in a small space?",
+          "answer": "Focus on vertical storage with pegboards and wall-mounted shelves. Use the back of doors and consider a rolling cart that can be stored in a closet when not in use."
+        },
+        {
+          "question": "What's the best way to organize thread and ribbons?",
+          "answer": "Use clear acrylic organizers so you can see colors at a glance. Mount thread racks on walls and use dowel rods or paper towel holders for ribbon spools."
+        }
+      ]
+    },
+    {
+      "title": "Pantry Organization for Beginners",
+      "slug": "pantry-organization-beginners",
+      "categorySlug": "pantry",
+      "description": "Create a Pinterest-worthy pantry without the overwhelm. This beginner-friendly guide covers everything from decluttering to container selection to maintenance tips.",
+      "sections": [
+        {
+          "heading": "Empty and Deep Clean Your Pantry",
+          "paragraphs": [
+            "Remove everything from your pantry and wipe down all shelves. Check expiration dates and discard anything past its prime.",
+            "This is also the time to measure your shelves so you can choose the right-sized containers and organizers."
+          ],
+          "productSlugs": []
+        },
+        {
+          "heading": "Invest in Quality Airtight Containers",
+          "paragraphs": [
+            "Transferring dry goods to uniform containers not only looks beautiful but keeps food fresher longer. Square or rectangular containers maximize shelf space better than round ones.",
+            "Label everything clearly—chalkboard labels are popular because you can update them when contents change."
+          ],
+          "productSlugs": ["airtight-pantry-containers"]
+        },
+        {
+          "heading": "Maximize Cabinet and Shelf Space",
+          "paragraphs": [
+            "Expandable shelf risers double your storage capacity by creating additional levels. Turntables make corner cabinets and deep shelves much more functional.",
+            "Place frequently used items at eye level and rarely used items on top shelves."
+          ],
+          "productSlugs": ["expandable-shelf-organizers", "lazy-susan-turntable-set"]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How often should I reorganize my pantry?",
+          "answer": "Do a quick tidy weekly when putting away groceries. A full reorganization every 3-6 months helps maintain the system and catch expired items."
+        },
+        {
+          "question": "Are glass or plastic containers better?",
+          "answer": "Both work well. Glass is more eco-friendly and doesn't stain, but plastic is lighter and less breakable—better for families with kids."
+        }
+      ]
+    },
+    {
+      "title": "Small Closet Organization Hacks",
+      "slug": "small-closet-organization-hacks",
+      "categorySlug": "closet",
+      "description": "Don't let a tiny closet limit your wardrobe. Discover space-saving hacks and products that maximize every inch of your small closet.",
+      "sections": [
+        {
+          "heading": "Slim Down Your Hangers",
+          "paragraphs": [
+            "Switching from bulky plastic hangers to slim velvet hangers can increase your closet capacity by 50%. The velvet coating also prevents clothes from slipping off.",
+            "Using matching hangers creates a uniform, organized look that makes getting dressed easier."
+          ],
+          "productSlugs": ["velvet-hangers-50pack"]
+        },
+        {
+          "heading": "Go Vertical with Hanging Organizers",
+          "paragraphs": [
+            "Hanging organizers with shelves and drawers transform unused vertical space into storage for sweaters, bags, and accessories.",
+            "They're perfect for renters since they don't require any installation or modifications to the closet."
+          ],
+          "productSlugs": ["hanging-closet-organizer"]
+        },
+        {
+          "heading": "Use Shelf Dividers for Stacked Items",
+          "paragraphs": [
+            "Prevent sweater avalanches and keep folded items neat with shelf dividers. They're essential for maintaining tidy stacks of sweaters, t-shirts, and jeans.",
+            "Clear acrylic dividers are virtually invisible and work with any closet style."
+          ],
+          "productSlugs": ["acrylic-shelf-dividers"]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do I organize a closet with no shelves?",
+          "answer": "Use a hanging organizer for shelved storage, add a freestanding shoe rack on the floor, and install an over-door organizer for accessories."
+        },
+        {
+          "question": "What's the best way to store seasonal clothes?",
+          "answer": "Store off-season clothes in vacuum bags under the bed or in labeled bins on the top shelf to free up prime closet real estate for current season items."
+        }
+      ]
+    },
+    {
+      "title": "Bathroom Organization on a Budget",
+      "slug": "bathroom-organization-budget",
+      "categorySlug": "bathroom",
+      "description": "Create a spa-like bathroom without breaking the bank. Smart storage solutions that maximize small bathroom spaces and work in rentals.",
+      "sections": [
+        {
+          "heading": "Maximize Door and Wall Space",
+          "paragraphs": [
+            "The back of your bathroom door is prime real estate. Over-door organizers can hold everything from toiletries to styling tools without taking up any floor space.",
+            "These are perfect for renters since they require no drilling or permanent installation."
+          ],
+          "productSlugs": ["over-door-bathroom-organizer"]
+        },
+        {
+          "heading": "Conquer the Under-Sink Cabinet",
+          "paragraphs": [
+            "Under-sink cabinets are notoriously awkward spaces. Expandable organizers designed to work around pipes make this area actually usable.",
+            "Group similar items together: cleaning supplies on one side, hair care on the other, and backstock of toiletries in the back."
+          ],
+          "productSlugs": ["under-sink-organizer"]
+        },
+        {
+          "heading": "Add Style with Countertop Organizers",
+          "paragraphs": [
+            "Corral daily essentials on trays to keep counters tidy and add a decorative touch. Bamboo trays work beautifully in bathrooms and are naturally water-resistant.",
+            "Group items by use: skincare together, dental care together, and so on."
+          ],
+          "productSlugs": ["bamboo-bathroom-tray-set"]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do I organize a bathroom with no counter space?",
+          "answer": "Use wall-mounted shelves or a over-toilet storage unit. Keep only essentials in the bathroom and store backstock elsewhere."
+        },
+        {
+          "question": "What's the best way to organize under a pedestal sink?",
+          "answer": "Use a small rolling cart or tiered organizer that fits around the pedestal. A pretty basket can corral essentials visibly without looking cluttered."
+        }
+      ]
+    },
+    {
+      "title": "How to Organize Kids' Craft Supplies",
+      "slug": "organize-kids-craft-supplies",
+      "categorySlug": "craft-room",
+      "description": "Keep art supplies organized and accessible for kids while maintaining your sanity. Systems that encourage creativity and make cleanup easy.",
+      "sections": [
+        {
+          "heading": "Choose Kid-Friendly Storage",
+          "paragraphs": [
+            "Storage should be at kid-height and easy for little hands to use. Rotating caddies are perfect—kids can spin to find what they need and carry it to the table.",
+            "Look for organizers with removable cups so kids can take just what they need for a project."
+          ],
+          "productSlugs": ["rotating-craft-caddy"]
+        },
+        {
+          "heading": "Create an Art Supply Wall",
+          "paragraphs": [
+            "A pegboard mounted at kid height gives children ownership of their supplies. Use large baskets and hooks they can easily reach.",
+            "Include a spot for finished artwork and works-in-progress to reduce paper clutter around the house."
+          ],
+          "productSlugs": ["pegboard-wall-organizer"]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do I keep craft supplies from taking over the house?",
+          "answer": "Designate one area for crafting and establish a rule that supplies stay there. Use a rolling cart that can be stored in a closet when not in use."
+        },
+        {
+          "question": "What age-appropriate organization can kids manage?",
+          "answer": "Even toddlers can put markers in cups and paper in baskets. Use picture labels for pre-readers and let kids help choose where things go."
+        }
+      ]
+    },
+    {
+      "title": "Luxury Closet Organization Ideas",
+      "slug": "luxury-closet-organization",
+      "categorySlug": "closet",
+      "description": "Elevate your closet to boutique status with premium organization solutions. Create a dressing room experience that makes getting ready a pleasure.",
+      "sections": [
+        {
+          "heading": "Invest in Quality Hangers",
+          "paragraphs": [
+            "Premium velvet hangers are the foundation of a luxury closet. They protect delicate fabrics, prevent shoulder bumps, and create a cohesive, high-end look.",
+            "Match your hanger color to your closet aesthetic—soft grays and blush tones feel especially luxurious."
+          ],
+          "productSlugs": ["velvet-hangers-50pack"]
+        },
+        {
+          "heading": "Add Elegant Shelf Organization",
+          "paragraphs": [
+            "Crystal-clear acrylic dividers keep everything visible while adding a sleek, modern touch. They're perfect for displaying handbags and creating Instagram-worthy shelf arrangements.",
+            "For the ultimate luxury look, fold items boutique-style and arrange by color."
+          ],
+          "productSlugs": ["acrylic-shelf-dividers", "hanging-closet-organizer"]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do I make my closet look like a boutique?",
+          "answer": "Use matching hangers, organize by category then color, add good lighting, and leave some breathing room between items. Less is more for a luxe look."
+        },
+        {
+          "question": "What's the best way to display handbags in a closet?",
+          "answer": "Use shelf dividers to keep bags upright, stuff them with tissue to maintain shape, and place them on upper shelves at eye level for a boutique display."
+        }
+      ]
+    }
+  ]
+}

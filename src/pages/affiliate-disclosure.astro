@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../data/site.json';
+
+const title = `Affiliate Disclosure - ${siteData.siteName}`;
+const description = `Affiliate disclosure and FTC compliance information for ${siteData.siteName}. Learn how we earn commissions through affiliate partnerships.`;
+---
+
+<BaseLayout title={title} description={description} pathname="/affiliate-disclosure/">
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-serif text-3xl lg:text-4xl font-bold text-stone-800 mb-8">
+        Affiliate Disclosure
+      </h1>
+      
+      <div class="prose prose-stone max-w-none">
+        <p class="text-lg text-stone-600 mb-6">
+          Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+        </p>
+        
+        <div class="bg-[#5e6d50]/10 border border-[#5e6d50]/20 rounded-xl p-6 mb-8">
+          <p class="text-stone-800 font-medium text-lg">
+            As an Amazon Associate I earn from qualifying purchases.
+          </p>
+        </div>
+        
+        <h2 class="font-serif text-2xl font-bold text-stone-800 mt-8 mb-4">
+          How We Make Money
+        </h2>
+        <p class="text-stone-600 mb-4">
+          {siteData.siteName} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+        </p>
+        <p class="text-stone-600 mb-4">
+          This means that when you click on certain links on our site and make a purchase, we may receive a small commission at no additional cost to you. This commission helps us maintain and improve our website, research new products, and continue providing valuable content to our readers.
+        </p>
+        
+        <h2 class="font-serif text-2xl font-bold text-stone-800 mt-8 mb-4">
+          What This Means for You
+        </h2>
+        <ul class="list-disc list-inside text-stone-600 space-y-2 mb-6">
+          <li>You pay the same price whether you use our affiliate links or not</li>
+          <li>Our affiliate relationships do not influence our product recommendations</li>
+          <li>We only recommend products we believe provide value to our readers</li>
+          <li>We disclose affiliate links clearly throughout our site</li>
+        </ul>
+        
+        <h2 class="font-serif text-2xl font-bold text-stone-800 mt-8 mb-4">
+          Our Commitment to Honesty
+        </h2>
+        <p class="text-stone-600 mb-4">
+          We take our responsibility to our readers seriously. Our product recommendations are based on thorough research, expert opinions, and real user reviews. We will never recommend a product solely because it offers a higher commission.
+        </p>
+        <p class="text-stone-600 mb-4">
+          Product prices and availability are accurate as of the date/time indicated and are subject to change. Any price and availability information displayed on Amazon at the time of purchase will apply to the purchase of the product.
+        </p>
+        
+        <h2 class="font-serif text-2xl font-bold text-stone-800 mt-8 mb-4">
+          How to Identify Affiliate Links
+        </h2>
+        <p class="text-stone-600 mb-4">
+          Throughout our website, you will find buttons and links that say things like "Check Price on Amazon" or "View on Amazon." These are affiliate links. We also include a small note (*Affiliate link) near these buttons for transparency.
+        </p>
+        
+        <h2 class="font-serif text-2xl font-bold text-stone-800 mt-8 mb-4">
+          Questions?
+        </h2>
+        <p class="text-stone-600 mb-4">
+          If you have any questions about our affiliate relationships or how we choose products to recommend, please don't hesitate to reach out. We're committed to transparency and are happy to address any concerns.
+        </p>
+        
+        <div class="bg-stone-100 rounded-xl p-6 mt-8">
+          <p class="text-stone-600 text-sm">
+            <strong>FTC Disclosure:</strong> In accordance with the Federal Trade Commission's 16 CFR, Part 255: "Guides Concerning the Use of Endorsements and Testimonials in Advertising," we disclose that we receive compensation for products purchased through affiliate links on this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

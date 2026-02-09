@@ -1,0 +1,49 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirects for trailing slashes (Astro handles this, but just in case)
+[[redirects]]
+  from = "/category/*"
+  to = "/category/:splat/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/product/*"
+  to = "/product/:splat/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/guide/*"
+  to = "/guide/:splat/"
+  status = 301
+  force = false
+
+# Custom 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404
+
+# Headers for security and caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

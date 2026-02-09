@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "title": "Craft Room Organization",
+      "slug": "craft-room",
+      "description": "Transform your creative space with smart storage solutions for supplies, tools, and materials. From thread organizers to paper storage, find everything you need for an inspiring craft room.",
+      "icon": "scissors"
+    },
+    {
+      "title": "Pantry Organization",
+      "slug": "pantry",
+      "description": "Create a beautifully organized pantry with our curated selection of containers, shelf organizers, and labeling systems. Make meal prep easier and reduce food waste.",
+      "icon": "utensils"
+    },
+    {
+      "title": "Closet Organization",
+      "slug": "closet",
+      "description": "Maximize your closet space with clever storage solutions. From velvet hangers to shelf dividers, discover tools that help you see and access everything you own.",
+      "icon": "shirt"
+    },
+    {
+      "title": "Bathroom Organization",
+      "slug": "bathroom",
+      "description": "Turn your bathroom into a spa-like retreat with smart storage for toiletries, towels, and beauty products. Solutions for every bathroom size and style.",
+      "icon": "bath"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import siteData from '../data/site.json';
+import { canonicalUrl } from '../lib/helpers';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: string;
+  pathname: string;
+}
+
+const { 
+  title, 
+  description, 
+  ogImage = siteData.defaultOgImage, 
+  ogType = 'website',
+  pathname 
+} = Astro.props;
+
+const canonical = canonicalUrl(pathname);
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteData.siteDomain}${ogImage}`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title}>
+  <meta name="description" content={description}>
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={canonical}>
+  
+  <!-- Pinterest Domain Verification -->
+  <meta name="p:domain_verify" content={siteData.pinterestDomainVerifyToken}>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={fullOgImage}>
+  <meta property="og:site_name" content={siteData.siteName}>
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content={canonical}>
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={fullOgImage}>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <!-- Custom Styles -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --color-sage-50: #f6f7f5;
+      --color-sage-100: #e8ebe4;
+      --color-sage-200: #d3d9cc;
+      --color-sage-300: #b5c0a9;
+      --color-sage-400: #95a383;
+      --color-sage-500: #788a66;
+      --color-sage-600: #5e6d50;
+      --color-sage-700: #4a5641;
+      --color-sage-800: #3d4637;
+      --color-sage-900: #343c30;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .font-sans {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--color-sage-50);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-sage-300);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-sage-400);
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800 min-h-screen flex flex-col">
+  <Header />
+  
+  <main class="flex-grow">
+    <slot />
+  </main>
+  
+  <Footer />
+  
+  <!-- Mobile menu script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuIcon?.classList.toggle('hidden');
+          closeIcon?.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
