@@ -22,64 +22,77 @@ const description = siteData.defaultMetaDescription;
 
 <BaseLayout title={title} description={description} pathname="/">
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-stone-100 via-[#f6f7f5] to-[#e8ebe4] overflow-hidden">
+  <section class="relative bg-gradient-to-br from-[color:var(--color-sage-50)] via-white to-[color:var(--color-sage-100)] overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-[#788a66] rounded-full blur-3xl"></div>
-      <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#95a383] rounded-full blur-3xl"></div>
+      <div class="absolute top-20 left-10 w-72 h-72 bg-[color:var(--color-sage-700)] rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-[color:var(--color-sage-500)] rounded-full blur-3xl"></div>
     </div>
-    
+
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="text-center lg:text-left">
-          <span class="inline-block bg-[#5e6d50]/10 text-[#5e6d50] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+          <span class="inline-block bg-[color:var(--color-sage-700)]/10 text-[color:var(--color-sage-700)] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
             ✨ Curated Organization Solutions
           </span>
+
           <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-800 mb-6 leading-tight">
-            Organize Your Home,<br>
-            <span class="text-[#5e6d50]">Simplify Your Life</span>
+            Organize Your Home,<br />
+            <span class="text-[color:var(--color-sage-700)]">Simplify Your Life</span>
           </h1>
+
           <p class="text-lg text-stone-600 mb-8 max-w-xl mx-auto lg:mx-0">
             Discover expert-curated organization products for every room. We research, test, and recommend the best solutions to help you create a beautiful, clutter-free home.
           </p>
+
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="/category/craft-room/" class="inline-flex items-center justify-center bg-[#5e6d50] hover:bg-[#4a5641] text-white font-semibold py-3.5 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-[#5e6d50]/25 hover:shadow-xl hover:shadow-[#5e6d50]/30">
+            <a
+              href="/category/craft-room/"
+              class="inline-flex items-center justify-center bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-semibold py-3.5 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
               Explore Craft Room
               <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <a href="/categories/" class="inline-flex items-center justify-center bg-white hover:bg-stone-50 text-stone-700 font-semibold py-3.5 px-8 rounded-xl transition-colors border border-stone-200">
+
+            <a
+              href="/categories/"
+              class="inline-flex items-center justify-center bg-white hover:bg-stone-50 text-stone-700 font-semibold py-3.5 px-8 rounded-xl transition-colors border border-stone-200"
+            >
               Browse All Categories
             </a>
           </div>
         </div>
-        
+
         <div class="relative hidden lg:block">
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-4">
               <div class="bg-white rounded-2xl shadow-lg p-4 transform hover:-translate-y-1 transition-transform">
                 <div class="aspect-square bg-stone-100 rounded-xl mb-3 overflow-hidden">
-                  <img src="/images/categories/craft-room.jpg" alt="Craft room organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';">
+                  <img src="/images/categories/craft-room.jpg" alt="Craft room organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';" />
                 </div>
                 <p class="font-medium text-stone-700 text-sm">Craft Room</p>
               </div>
+
               <div class="bg-white rounded-2xl shadow-lg p-4 transform hover:-translate-y-1 transition-transform">
                 <div class="aspect-square bg-stone-100 rounded-xl mb-3 overflow-hidden">
-                  <img src="/images/categories/bathroom.jpg" alt="Bathroom organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';">
+                  <img src="/images/categories/bathroom.jpg" alt="Bathroom organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';" />
                 </div>
                 <p class="font-medium text-stone-700 text-sm">Bathroom</p>
               </div>
             </div>
+
             <div class="space-y-4 pt-8">
               <div class="bg-white rounded-2xl shadow-lg p-4 transform hover:-translate-y-1 transition-transform">
                 <div class="aspect-square bg-stone-100 rounded-xl mb-3 overflow-hidden">
-                  <img src="/images/categories/pantry.jpg" alt="Pantry organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';">
+                  <img src="/images/categories/pantry.jpg" alt="Pantry organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';" />
                 </div>
                 <p class="font-medium text-stone-700 text-sm">Pantry</p>
               </div>
+
               <div class="bg-white rounded-2xl shadow-lg p-4 transform hover:-translate-y-1 transition-transform">
                 <div class="aspect-square bg-stone-100 rounded-xl mb-3 overflow-hidden">
-                  <img src="/images/categories/closet.jpg" alt="Closet organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';">
+                  <img src="/images/categories/closet.jpg" alt="Closet organization" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='/images/placeholder-category.svg';" />
                 </div>
                 <p class="font-medium text-stone-700 text-sm">Closet</p>
               </div>
@@ -89,7 +102,7 @@ const description = siteData.defaultMetaDescription;
       </div>
     </div>
   </section>
-  
+
   <!-- Categories Section -->
   <section class="py-16 lg:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,36 +114,38 @@ const description = siteData.defaultMetaDescription;
           Find the perfect organization solutions for every space in your home
         </p>
       </div>
-      
+
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-        {categories.map(category => (
+        {categories.map((category) => (
           <CategoryCard category={category} />
         ))}
       </div>
     </div>
   </section>
-  
+
   <!-- Top Picks Section -->
-  <section class="py-16 lg:py-20 bg-stone-50">
+  <section class="py-16 lg:py-20 bg-[color:var(--color-sage-50)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block bg-[#5e6d50]/10 text-[#5e6d50] text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+        <span class="inline-block bg-[color:var(--color-sage-700)]/10 text-[color:var(--color-sage-700)] text-sm font-medium px-4 py-1.5 rounded-full mb-4">
           Curated Selections
         </span>
+
         <h2 class="font-serif text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
           Our Top Picks
         </h2>
+
         <p class="text-stone-600 max-w-2xl mx-auto">
           Hand-selected organization products that our editors love
         </p>
       </div>
-      
+
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-        {topPicks.map(product => (
+        {topPicks.map((product) => (
           <ProductCard product={product} />
         ))}
       </div>
-      
+
       <div class="text-center mt-10">
         <a href="/products/" class="inline-flex items-center justify-center bg-white hover:bg-stone-100 text-stone-700 font-semibold py-3 px-8 rounded-xl transition-colors border border-stone-200">
           View All Products
@@ -141,28 +156,30 @@ const description = siteData.defaultMetaDescription;
       </div>
     </div>
   </section>
-  
+
   <!-- Guides Section -->
   <section class="py-16 lg:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block bg-[#5e6d50]/10 text-[#5e6d50] text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+        <span class="inline-block bg-[color:var(--color-sage-700)]/10 text-[color:var(--color-sage-700)] text-sm font-medium px-4 py-1.5 rounded-full mb-4">
           Expert Advice
         </span>
+
         <h2 class="font-serif text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
           Organization Guides
         </h2>
+
         <p class="text-stone-600 max-w-2xl mx-auto">
           Step-by-step guides to help you organize every room in your home
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        {featuredGuides.map(guide => (
+        {featuredGuides.map((guide) => (
           <GuideCard guide={guide} />
         ))}
       </div>
-      
+
       <div class="text-center mt-10">
         <a href="/guides/" class="inline-flex items-center justify-center bg-white hover:bg-stone-100 text-stone-700 font-semibold py-3 px-8 rounded-xl transition-colors border border-stone-200">
           View All Guides
@@ -173,9 +190,9 @@ const description = siteData.defaultMetaDescription;
       </div>
     </div>
   </section>
-  
+
   <!-- How We Choose Section (Trust Block) -->
-  <section class="py-16 lg:py-20 bg-gradient-to-br from-[#5e6d50] to-[#4a5641] text-white">
+  <section class="py-16 lg:py-20 bg-gradient-to-br from-[color:var(--color-sage-700)] to-[color:var(--color-sage-800)] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="font-serif text-3xl lg:text-4xl font-bold mb-4">
@@ -185,7 +202,7 @@ const description = siteData.defaultMetaDescription;
           We spend hours researching and testing products so you don't have to
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="text-center">
           <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -198,7 +215,7 @@ const description = siteData.defaultMetaDescription;
             We analyze thousands of reviews and expert opinions
           </p>
         </div>
-        
+
         <div class="text-center">
           <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -210,7 +227,7 @@ const description = siteData.defaultMetaDescription;
             Only products that meet our high standards make the cut
           </p>
         </div>
-        
+
         <div class="text-center">
           <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -222,7 +239,7 @@ const description = siteData.defaultMetaDescription;
             We find the best products at every price point
           </p>
         </div>
-        
+
         <div class="text-center">
           <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -237,38 +254,41 @@ const description = siteData.defaultMetaDescription;
       </div>
     </div>
   </section>
-  
+
   <!-- Newsletter Section -->
-  <section class="py-16 lg:py-20 bg-stone-50">
+  <section class="py-16 lg:py-20 bg-[color:var(--color-sage-50)]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-8 lg:p-12">
-        <div class="w-16 h-16 bg-[#5e6d50]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-          <svg class="w-8 h-8 text-[#5e6d50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-16 h-16 bg-[color:var(--color-sage-700)]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-[color:var(--color-sage-700)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </div>
+
         <h2 class="font-serif text-2xl lg:text-3xl font-bold text-stone-800 mb-4">
           Get Organization Tips & Deals
         </h2>
+
         <p class="text-stone-600 mb-8">
           Join our newsletter for weekly organization inspiration, exclusive deals, and expert tips delivered to your inbox.
         </p>
-        
+
         <!-- Newsletter Placeholder Form -->
         <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Newsletter signup coming soon!');">
-          <input 
-            type="email" 
-            placeholder="Enter your email" 
-            class="flex-grow px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#5e6d50] focus:border-transparent"
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-grow px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--color-sage-700)] focus:border-transparent"
             required
-          >
-          <button 
+          />
+          <button
             type="submit"
-            class="bg-[#5e6d50] hover:bg-[#4a5641] text-white font-semibold py-3 px-6 rounded-xl transition-colors whitespace-nowrap"
+            class="bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-semibold py-3 px-6 rounded-xl transition-colors whitespace-nowrap"
           >
             Subscribe
           </button>
         </form>
+
         <p class="text-xs text-stone-400 mt-4">
           No spam, unsubscribe anytime. We respect your privacy.
         </p>

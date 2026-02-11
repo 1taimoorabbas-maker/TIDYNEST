@@ -20,44 +20,44 @@ const imagePath = productImagePath(product.slug);
 const badgeInfo = product.badge ? getBadgeInfo(product.badge) : null;
 ---
 
-<article class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-stone-100 flex flex-col h-full">
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-[color:var(--color-sage-200)] flex flex-col h-full">
   <!-- Image Container -->
   <a href={`/product/${product.slug}/`} class="block relative aspect-[4/3] overflow-hidden bg-stone-100">
-    <img 
+    <img
       src={imagePath}
       alt={product.alt}
       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       loading="lazy"
       onerror="this.onerror=null; this.src='/images/placeholder-product.svg';"
-    >
+    />
     {badgeInfo && (
       <span class={`absolute top-3 left-3 ${badgeInfo.color} text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm`}>
         {badgeInfo.label}
       </span>
     )}
   </a>
-  
+
   <!-- Content -->
   <div class="p-4 flex flex-col flex-grow">
     <a href={`/product/${product.slug}/`} class="block">
-      <h3 class="font-serif text-base lg:text-lg font-semibold text-stone-800 group-hover:text-[#5e6d50] transition-colors line-clamp-2 mb-2">
+      <h3 class="font-serif text-base lg:text-lg font-semibold text-stone-800 group-hover:text-[color:var(--color-sage-700)] transition-colors line-clamp-2 mb-2">
         {product.title}
       </h3>
     </a>
-    
+
     {showDescription && (
       <p class="text-stone-600 text-sm line-clamp-2 mb-4 flex-grow">
         {product.shortDescription}
       </p>
     )}
-    
+
     <!-- CTA -->
     <div class="mt-auto space-y-2">
-      <a 
+      <a
         href={affiliateUrl}
         target="_blank"
         rel="nofollow sponsored noopener"
-        class="block w-full text-center bg-[#5e6d50] hover:bg-[#4a5641] text-white font-medium py-2.5 px-4 rounded-lg transition-colors text-sm"
+        class="block w-full text-center bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-medium py-2.5 px-4 rounded-lg transition-colors text-sm"
       >
         Check Today's Price
       </a>

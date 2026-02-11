@@ -6,7 +6,7 @@
     </linearGradient>
     <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#788a66;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#5e6d50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F3A5F;stop-opacity:1" />
     </linearGradient>
   </defs>
   
@@ -15,7 +15,7 @@
   
   <!-- Decorative circles -->
   <circle cx="100" cy="100" r="200" fill="#788a66" opacity="0.1"/>
-  <circle cx="1100" cy="530" r="250" fill="#95a383" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="250" fill="#162B45" opacity="0.1"/>
   
   <!-- Logo box -->
   <rect x="520" y="180" width="80" height="80" rx="16" fill="url(#logoGrad)"/>
@@ -27,9 +27,9 @@
   <text x="600" y="380" font-family="Arial, sans-serif" font-size="28" fill="#57534e" text-anchor="middle">Organize Your Home, Simplify Your Life</text>
   
   <!-- Tagline bar -->
-  <rect x="350" y="420" width="500" height="50" rx="25" fill="#5e6d50"/>
+  <rect x="350" y="420" width="500" height="50" rx="25" fill="#1F3A5F"/>
   <text x="600" y="453" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Expert-Curated Home Organization Solutions</text>
   
   <!-- Bottom decoration -->
-  <rect x="0" y="600" width="1200" height="30" fill="#5e6d50"/>
+  <rect x="0" y="600" width="1200" height="30" fill="#1F3A5F"/>
 </svg>

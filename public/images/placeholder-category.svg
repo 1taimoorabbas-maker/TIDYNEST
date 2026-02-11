@@ -14,18 +14,18 @@
   <line x1="200" y1="400" x2="600" y2="400" stroke="#788a66" stroke-width="3"/>
   
   <!-- Items on shelves -->
-  <rect x="230" y="120" width="60" height="70" rx="4" fill="#5e6d50" opacity="0.6"/>
-  <rect x="310" y="140" width="50" height="50" rx="4" fill="#95a383" opacity="0.6"/>
+  <rect x="230" y="120" width="60" height="70" rx="4" fill="#1F3A5F" opacity="0.6"/>
+  <rect x="310" y="140" width="50" height="50" rx="4" fill="#162B45" opacity="0.6"/>
   <rect x="380" y="130" width="70" height="60" rx="4" fill="#788a66" opacity="0.6"/>
-  <circle cx="520" cy="160" r="30" fill="#5e6d50" opacity="0.5"/>
+  <circle cx="520" cy="160" r="30" fill="#1F3A5F" opacity="0.5"/>
   
-  <rect x="240" y="220" width="80" height="70" rx="4" fill="#95a383" opacity="0.6"/>
-  <rect x="350" y="240" width="60" height="50" rx="4" fill="#5e6d50" opacity="0.6"/>
+  <rect x="240" y="220" width="80" height="70" rx="4" fill="#162B45" opacity="0.6"/>
+  <rect x="350" y="240" width="60" height="50" rx="4" fill="#1F3A5F" opacity="0.6"/>
   <rect x="450" y="230" width="90" height="60" rx="4" fill="#788a66" opacity="0.6"/>
   
   <rect x="220" y="320" width="100" height="70" rx="4" fill="#788a66" opacity="0.6"/>
-  <rect x="340" y="340" width="70" height="50" rx="4" fill="#95a383" opacity="0.6"/>
-  <circle cx="500" cy="360" r="35" fill="#5e6d50" opacity="0.5"/>
+  <rect x="340" y="340" width="70" height="50" rx="4" fill="#162B45" opacity="0.6"/>
+  <circle cx="500" cy="360" r="35" fill="#1F3A5F" opacity="0.5"/>
   
-  <text x="400" y="550" font-family="Arial, sans-serif" font-size="20" fill="#5e6d50" text-anchor="middle">Category Image</text>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="20" fill="#1F3A5F" text-anchor="middle">Category Image</text>
 </svg>

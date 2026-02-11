@@ -4,7 +4,7 @@ import GuideCard from '../../components/GuideCard.astro';
 import siteData from '../../data/site.json';
 import categoriesData from '../../data/categories.json';
 import guidesData from '../../data/guides.json';
-import { getGuidesByCategory, getCategoryBySlug } from '../../lib/helpers';
+import { getGuidesByCategory } from '../../lib/helpers';
 
 const { categories } = categoriesData;
 const { guides } = guidesData;
@@ -15,57 +15,63 @@ const description = `Expert organization guides and tips for every room. Learn h
 
 <BaseLayout title={title} description={description} pathname="/guides/">
   <!-- Page Header -->
-  <section class="bg-gradient-to-br from-stone-100 via-[#f6f7f5] to-[#e8ebe4] py-12 lg:py-16">
+  <section class="bg-gradient-to-br from-[color:var(--color-sage-50)] via-white to-[color:var(--color-sage-100)] py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center text-sm text-stone-500 mb-6">
-        <a href="/" class="hover:text-[#5e6d50] transition-colors">Home</a>
+        <a href="/" class="hover:text-[color:var(--color-sage-700)] transition-colors">Home</a>
         <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
         <span class="text-stone-800">Guides</span>
       </nav>
-      
+
       <div class="text-center">
-        <span class="inline-block bg-[#5e6d50]/10 text-[#5e6d50] text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+        <span class="inline-block bg-[color:var(--color-sage-700)]/10 text-[color:var(--color-sage-700)] text-sm font-medium px-4 py-1.5 rounded-full mb-4">
           Expert Advice
         </span>
+
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 mb-4">
           Organization Guides
         </h1>
+
         <p class="text-lg text-stone-600 max-w-2xl mx-auto">
           Step-by-step guides to help you transform every room in your home. Written by organization experts.
         </p>
       </div>
     </div>
   </section>
-  
+
   <!-- Featured Guide -->
   {guides.length > 0 && (
     <section class="py-12 lg:py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-br from-[#5e6d50] to-[#4a5641] rounded-2xl overflow-hidden">
+        <div class="bg-gradient-to-br from-[color:var(--color-sage-700)] to-[color:var(--color-sage-800)] rounded-2xl overflow-hidden">
           <div class="grid lg:grid-cols-2 gap-0">
             <div class="relative aspect-[16/9] lg:aspect-auto">
-              <img 
+              <img
                 src={`/images/guides/${guides[0].slug}.jpg`}
                 alt={guides[0].title}
                 class="w-full h-full object-cover"
                 onerror="this.onerror=null; this.src='/images/placeholder-guide.svg';"
-              >
+              />
             </div>
+
             <div class="p-8 lg:p-12 flex flex-col justify-center text-white">
               <span class="inline-block bg-white/20 text-white text-sm font-medium px-3 py-1 rounded-full mb-4 self-start">
                 Featured Guide
               </span>
+
               <h2 class="font-serif text-2xl lg:text-3xl font-bold mb-4">
                 {guides[0].title}
               </h2>
+
               <p class="text-white/80 mb-6">
                 {guides[0].description}
               </p>
-              <a 
+
+              <a
                 href={`/guide/${guides[0].slug}/`}
-                class="inline-flex items-center self-start bg-white hover:bg-stone-100 text-[#5e6d50] font-semibold py-3 px-6 rounded-xl transition-colors"
+                class="inline-flex items-center self-start bg-white hover:bg-stone-100 text-[color:var(--color-sage-700)] hover:text-[color:var(--color-sage-800)] font-semibold py-3 px-6 rounded-xl transition-colors"
               >
                 Read Guide
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,14 +84,14 @@ const description = `Expert organization guides and tips for every room. Learn h
       </div>
     </section>
   )}
-  
+
   <!-- All Guides by Category -->
-  <section class="py-12 lg:py-16 bg-stone-50">
+  <section class="py-12 lg:py-16 bg-[color:var(--color-sage-50)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {categories.map(category => {
+      {categories.map((category) => {
         const categoryGuides = getGuidesByCategory(guides, category.slug);
         if (categoryGuides.length === 0) return null;
-        
+
         return (
           <div class="mb-16 last:mb-0">
             <div class="flex items-center justify-between mb-6">
@@ -95,9 +101,10 @@ const description = `Expert organization guides and tips for every room. Learn h
                 </h2>
                 <p class="text-stone-600 mt-1">{categoryGuides.length} guides</p>
               </div>
-              <a 
+
+              <a
                 href={`/category/${category.slug}/`}
-                class="hidden sm:inline-flex items-center text-[#5e6d50] hover:text-[#4a5641] font-medium transition-colors"
+                class="hidden sm:inline-flex items-center text-[color:var(--color-sage-700)] hover:text-[color:var(--color-sage-800)] font-medium transition-colors"
               >
                 View Category
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,9 +112,9 @@ const description = `Expert organization guides and tips for every room. Learn h
                 </svg>
               </a>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {categoryGuides.map(guide => (
+              {categoryGuides.map((guide) => (
                 <GuideCard guide={guide} />
               ))}
             </div>
@@ -116,17 +123,22 @@ const description = `Expert organization guides and tips for every room. Learn h
       })}
     </div>
   </section>
-  
+
   <!-- CTA Section -->
   <section class="py-12 lg:py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-serif text-2xl lg:text-3xl font-bold text-stone-800 mb-4">
         Ready to Get Organized?
       </h2>
+
       <p class="text-stone-600 mb-8">
         Browse our curated selection of organization products to get started.
       </p>
-      <a href="/products/" class="inline-flex items-center justify-center bg-[#5e6d50] hover:bg-[#4a5641] text-white font-semibold py-3 px-8 rounded-xl transition-colors">
+
+      <a
+        href="/products/"
+        class="inline-flex items-center justify-center bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-semibold py-3 px-8 rounded-xl transition-colors"
+      >
         Shop All Products
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />

@@ -13,35 +13,45 @@ const currentYear = new Date().getFullYear();
       <!-- Brand Column -->
       <div class="lg:col-span-1">
         <a href="/" class="flex items-center space-x-2 mb-4">
-          <div class="w-10 h-10 bg-gradient-to-br from-[#95a383] to-[#788a66] rounded-lg flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-          </div>
+          <img
+            src="/brand-mark.png"
+            alt="Manziria"
+            width="40"
+            height="40"
+            class="w-10 h-10 rounded-lg"
+            loading="lazy"
+          />
           <span class="font-serif text-xl font-semibold text-white">{siteData.siteName}</span>
         </a>
+
         <p class="text-stone-400 text-sm mb-4">
           {siteData.tagline}
         </p>
         <p class="text-stone-400 text-sm">
           Helping you create beautiful, organized spaces throughout your home.
         </p>
-        
+
         <!-- Social Links -->
         <div class="flex items-center space-x-4 mt-6">
-          <a href={siteData.pinterestProfileUrl} target="_blank" rel="noopener" class="text-stone-400 hover:text-white transition-colors" aria-label="Follow us on Pinterest">
+          <a
+            href={siteData.pinterestProfileUrl}
+            target="_blank"
+            rel="noopener"
+            class="text-stone-400 hover:text-white transition-colors"
+            aria-label="Follow us on Pinterest"
+          >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0a12 12 0 0 0-4.373 23.178c-.07-.937-.134-2.377.028-3.401.146-.926.943-5.893.943-5.893s-.24-.481-.24-1.192c0-1.117.648-1.951 1.454-1.951.686 0 1.017.515 1.017 1.132 0 .69-.439 1.72-.666 2.677-.19.8.402 1.452 1.192 1.452 1.43 0 2.529-1.508 2.529-3.684 0-1.926-1.384-3.273-3.36-3.273-2.29 0-3.633 1.716-3.633 3.493 0 .691.266 1.432.599 1.834a.24.24 0 0 1 .056.23c-.061.254-.197.8-.224.912-.035.146-.116.178-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A12 12 0 1 0 12 0z"/>
             </svg>
           </a>
         </div>
       </div>
-      
+
       <!-- Categories Column -->
       <div>
         <h3 class="font-serif text-lg font-semibold text-white mb-4">Categories</h3>
         <ul class="space-y-3">
-          {categories.map(cat => (
+          {categories.map((cat) => (
             <li>
               <a href={`/category/${cat.slug}/`} class="text-stone-400 hover:text-white transition-colors text-sm">
                 {cat.title}
@@ -50,7 +60,7 @@ const currentYear = new Date().getFullYear();
           ))}
         </ul>
       </div>
-      
+
       <!-- Quick Links Column -->
       <div>
         <h3 class="font-serif text-lg font-semibold text-white mb-4">Quick Links</h3>
@@ -71,7 +81,7 @@ const currentYear = new Date().getFullYear();
           </li>
         </ul>
       </div>
-      
+
       <!-- Legal Column -->
       <div>
         <h3 class="font-serif text-lg font-semibold text-white mb-4">Legal</h3>
@@ -89,22 +99,9 @@ const currentYear = new Date().getFullYear();
       </div>
     </div>
   </div>
-  
+
   <!-- Affiliate Disclosure -->
   <div class="border-t border-stone-700">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
       <p class="text-stone-400 text-xs text-center leading-relaxed">
-        <strong class="text-stone-300">Affiliate Disclosure:</strong> {siteData.siteName} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change. Any price and availability information displayed on Amazon at the time of purchase will apply.
-      </p>
-    </div>
-  </div>
-  
-  <!-- Copyright -->
-  <div class="border-t border-stone-700 bg-stone-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <p class="text-stone-500 text-xs text-center">
-        &copy; {currentYear} {siteData.siteName}. All rights reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+        <strong class="text-stone-300">Affiliate Disclosure:</strong> {siteData.siteName} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon
