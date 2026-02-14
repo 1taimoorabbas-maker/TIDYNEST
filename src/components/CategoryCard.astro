@@ -1,5 +1,5 @@
 ---
-import { categoryImagePath, getCategoryIcon } from '../lib/helpers';
+import { categoryImagePath } from '../lib/helpers';
 
 interface Props {
   category: {
@@ -13,7 +13,6 @@ interface Props {
 
 const { category, size = 'small' } = Astro.props;
 const imagePath = categoryImagePath(category.slug);
-const iconSvg = getCategoryIcon(category.icon);
 ---
 
 <a 
@@ -38,13 +37,12 @@ const iconSvg = getCategoryIcon(category.icon);
   
   <!-- Content -->
   <div class="absolute inset-0 flex flex-col justify-end p-4 lg:p-6">
-    <div class="flex items-center gap-3 mb-2">
-      <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white">
-        <Fragment set:html={iconSvg} />
-      </div>
+    <!-- Title Row (responsive) -->
+    <div class="mb-2">
       <h3 class:list={[
-        "font-serif font-semibold text-white",
-        size === 'large' ? 'text-xl lg:text-2xl' : 'text-lg lg:text-xl'
+        "font-serif font-semibold text-white leading-snug",
+        size === "large" ? "text-xl lg:text-2xl" : "text-base sm:text-lg lg:text-xl",
+        size === "large" ? "" : "break-words"
       ]}>
         {category.title}
       </h3>

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../data/site.json';
+
+const title = `Start Here - ${siteData.siteName}`;
+const description = `Start organizing with curated guides, room-by-room picks, and style-based collections.`;
+const pathname = `/start/`;
+const ogImage = `/images/og-default.svg`;
+---
+
+<BaseLayout title={title} description={description} pathname={pathname} ogImage={ogImage} ogType="website">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-stone-100 via-[#f6f7f5] to-[#e8ebe4] border-b border-stone-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800">
+        Start Organizing (Without the Overwhelm)
+      </h1>
+      <p class="mt-4 text-lg text-stone-600 max-w-3xl">
+        Choose one path below and start with one small win. We curate products and guides to help you build systems that are easy to maintain.
+      </p>
+
+      <div class="mt-6 bg-white/70 border border-stone-200 rounded-2xl p-5">
+        <ul class="grid sm:grid-cols-3 gap-3 text-sm text-stone-600">
+          <li class="flex gap-2"><span class="text-stone-800 font-semibold">✓</span> Curated picks, no clutter</li>
+          <li class="flex gap-2"><span class="text-stone-800 font-semibold">✓</span> Mobile-friendly layouts</li>
+          <li class="flex gap-2"><span class="text-stone-800 font-semibold">✓</span> Transparent affiliate disclosure</li>
+        </ul>
+        <p class="mt-3 text-xs text-stone-400">
+          *Some links are affiliate links. We may earn a commission at no extra cost to you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Choices -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/guides/" class="group bg-stone-50 border border-stone-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h2 class="font-serif text-xl font-bold text-stone-800 group-hover:text-[color:var(--color-sage-700)] transition-colors">
+            Browse Guides
+          </h2>
+          <p class="mt-2 text-stone-600 text-sm">
+            Step-by-step organization guides so you know what to do first (and what to buy).
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[color:var(--color-sage-700)]">Start with guides →</p>
+        </a>
+
+        <a href="/categories/" class="group bg-stone-50 border border-stone-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h2 class="font-serif text-xl font-bold text-stone-800 group-hover:text-[color:var(--color-sage-700)] transition-colors">
+            Browse Rooms
+          </h2>
+          <p class="mt-2 text-stone-600 text-sm">
+            Pantry, closet, bathroom, craft room—pick your room and see curated product picks.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[color:var(--color-sage-700)]">Pick a room →</p>
+        </a>
+
+        <a href="/styles/" class="group bg-stone-50 border border-stone-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h2 class="font-serif text-xl font-bold text-stone-800 group-hover:text-[color:var(--color-sage-700)] transition-colors">
+            Shop by Style
+          </h2>
+          <p class="mt-2 text-stone-600 text-sm">
+            Prefer “minimal,” “quiet luxury,” or “spa”? Shop curated sets that match your aesthetic.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-[color:var(--color-sage-700)]">Shop styles →</p>
+        </a>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/products/" class="inline-flex items-center justify-center bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-semibold py-4 px-10 rounded-xl transition-colors shadow-sm">
+          Browse All Products
+        </a>
+        <p class="mt-3 text-xs text-stone-400">Best for: “I know what I need—show me everything.”</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

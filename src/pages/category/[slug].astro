@@ -6,7 +6,7 @@ import siteData from '../../data/site.json';
 import categoriesData from '../../data/categories.json';
 import productsData from '../../data/products.json';
 import guidesData from '../../data/guides.json';
-import { getProductsByCategory, getGuidesByCategory, getCategoryIcon } from '../../lib/helpers';
+import { getProductsByCategory, getGuidesByCategory } from '../../lib/helpers';
 
 export function getStaticPaths() {
   const { categories } = categoriesData;
@@ -23,7 +23,6 @@ const { guides } = guidesData;
 
 const categoryProducts = getProductsByCategory(products, category.slug);
 const categoryGuides = getGuidesByCategory(guides, category.slug);
-const iconSvg = getCategoryIcon(category.icon);
 
 const title = `${category.title} - ${siteData.siteName}`;
 const description = category.description;
@@ -55,10 +54,6 @@ const ogImage = `/images/categories/${category.slug}.jpg`;
       <div class="grid lg:grid-cols-2 gap-8 items-center">
         <div>
           <div class="flex items-center gap-4 mb-4">
-            <div class="w-14 h-14 bg-[color:var(--color-sage-700)]/10 rounded-xl flex items-center justify-center text-[color:var(--color-sage-700)]">
-              <Fragment set:html={iconSvg} />
-            </div>
-
             <span class="bg-[color:var(--color-sage-700)]/10 text-[color:var(--color-sage-700)] text-sm font-medium px-3 py-1 rounded-full">
               {categoryProducts.length} Products
             </span>
@@ -235,14 +230,9 @@ const ogImage = `/images/categories/${category.slug}.jpg`;
             href={`/category/${cat.slug}/`}
             class="group bg-white rounded-xl p-4 border border-stone-200 hover:border-[color:var(--color-sage-700)] hover:shadow-md transition-all"
           >
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-[color:var(--color-sage-700)]/10 rounded-lg flex items-center justify-center text-[color:var(--color-sage-700)] group-hover:bg-[color:var(--color-sage-700)] group-hover:text-white transition-colors">
-                <Fragment set:html={getCategoryIcon(cat.icon)} />
-              </div>
-              <span class="font-medium text-stone-700 group-hover:text-[color:var(--color-sage-700)] transition-colors">
-                {cat.title}
-              </span>
-            </div>
+            <span class="font-medium text-stone-700 group-hover:text-[color:var(--color-sage-700)] transition-colors">
+              {cat.title}
+            </span>
           </a>
         ))}
       </div>

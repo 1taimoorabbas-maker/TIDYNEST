@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import siteData from '../../data/site.json';
+import stylesData from '../../data/styles.json';
+import categoriesData from '../../data/categories.json';
+
+const title = `Styles - ${siteData.siteName}`;
+const description = `Shop by style: curated organization picks for pantry, closet, bathroom, and craft room—designed to match your aesthetic.`;
+const pathname = `/styles/`;
+const ogImage = `/images/og-default.svg`;
+
+const { styles } = stylesData;
+const { categories } = categoriesData;
+
+const grouped = categories.map(cat => ({
+  category: cat,
+  styles: styles.filter(s => s.categorySlug === cat.slug)
+}));
+---
+
+<BaseLayout title={title} description={description} pathname={pathname} ogImage={ogImage} ogType="website">
+  <section class="bg-gradient-to-br from-stone-100 via-[#f6f7f5] to-[#e8ebe4] border-b border-stone-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800">
+        Shop by Style
+      </h1>
+      <p class="mt-4 text-lg text-stone-600">
+        Pick a style you love—then shop a curated set of products designed for that look and lifestyle.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="space-y-14">
+        {grouped.map(group => (
+          <div id={group.category.slug} class="scroll-mt-24">
+            <!-- Category header (fixed mobile layout + proper button) -->
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-6">
+              <div class="min-w-0">
+                <h2 class="font-serif text-2xl font-bold text-stone-800">{group.category.title}</h2>
+                <p class="text-stone-600 mt-1">{group.category.description}</p>
+              </div>
+
+              <a
+                href={`/category/${group.category.slug}/`}
+                class="shrink-0 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-[color:var(--color-sage-800)] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[color:var(--color-sage-700)] transition-colors"
+              >
+                <span>Browse {group.category.title}</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Style cards (now match the “Categories” card feel + proper button) -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {group.styles.map(style => (
+                <a
+                  href={`/styles/${style.slug}/`}
+                  class="group block overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm hover:shadow-md transition-all"
+                >
+                  <div class="aspect-[4/3] bg-stone-100 overflow-hidden">
+                    <img
+                      src={`/images/styles/${style.slug}.jpg`}
+                      alt={style.title}
+                      class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                      onerror="this.onerror=null; this.src='/images/og-default.svg';"
+                    />
+                  </div>
+
+                  <div class="p-5">
+                    <h3 class="font-serif font-bold text-lg text-stone-800 group-hover:text-[color:var(--color-sage-800)] transition-colors">
+                      {style.title}
+                    </h3>
+
+                    <p class="text-sm text-stone-600 mt-2 line-clamp-3">
+                      {style.description}
+                    </p>
+
+                    {/* Optional: if your styles.json includes productSlugs, this will show a count like Categories */}
+                    {style.productSlugs?.length ? (
+                      <p class="text-xs text-stone-500 mt-3">
+                        {style.productSlugs.length} products
+                      </p>
+                    ) : null}
+
+                    <div class="mt-4">
+                      <span class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[color:var(--color-sage-800)] px-4 py-2.5 text-sm font-semibold text-white shadow-sm group-hover:bg-[color:var(--color-sage-700)] transition-colors">
+                        <span>Shop this style</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

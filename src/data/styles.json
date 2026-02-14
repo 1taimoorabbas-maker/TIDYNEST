@@ -1,0 +1,175 @@
+{
+  "styles": [
+    {
+      "slug": "pantry-minimal-pantry-aesthetic",
+      "title": "Minimal Pantry Aesthetic",
+      "categorySlug": "pantry",
+      "description": "Clean lines, clear containers, and simple labels—this style is all about a calm, streamlined pantry that stays easy to maintain.",
+      "productSlugs": [
+        "airtight-pantry-containers",
+        "clear-stackable-pantry-bins-set",
+        "pantry-label-set-minimal",
+        "expandable-shelf-organizers",
+        "cereal-containers-set-pour-friendly",
+        "non-slip-shelf-liner-pantry-cabinets"
+      ]
+    },
+    {
+      "slug": "pantry-organic-modern-pantry",
+      "title": "Organic Modern Pantry",
+      "categorySlug": "pantry",
+      "description": "Warm neutrals, natural textures, and an elevated look—perfect for an ‘aesthetic but practical’ pantry.",
+      "productSlugs": [
+        "glass-storage-jars-bamboo-lids-set",
+        "spice-jar-set-square-glass-labels",
+        "lazy-susan-turntable-set",
+        "two-tier-turntable-organizer-oils-sauces",
+        "tiered-spice-rack-cabinet-counter",
+        "can-dispenser-organizer"
+      ]
+    },
+    {
+      "slug": "pantry-family-snack-zone",
+      "title": "Family Snack Zone Pantry",
+      "categorySlug": "pantry",
+      "description": "Grab-and-go bins, clear categories, and easy routines—built for busy families and kid-friendly snack organization.",
+      "productSlugs": [
+        "snack-organizer-bins-kid-friendly",
+        "over-the-door-pantry-organizer-rack",
+        "under-shelf-hanging-basket-organizer",
+        "snack-drawer-organizer-dividers",
+        "pull-out-cabinet-organizer-baskets",
+        "stackable-water-bottle-organizer"
+      ]
+    },
+
+    {
+      "slug": "closet-quiet-luxury-closet",
+      "title": "Quiet Luxury Closet",
+      "categorySlug": "closet",
+      "description": "Boutique-style organization with a clean, elevated feel—matching hangers, tidy zones, and polished storage.",
+      "productSlugs": [
+        "acrylic-shelf-dividers",
+        "clear-shoe-boxes-stackable-set",
+        "purse-organizer-shelf-divider-style",
+        "velvet-hangers-50pack",
+        "over-the-door-full-length-mirror",
+        "motion-sensor-closet-lights-rechargeable"
+      ]
+    },
+    {
+      "slug": "closet-minimal-capsule-closet",
+      "title": "Minimal Capsule Closet",
+      "categorySlug": "closet",
+      "description": "Simple, space-smart pieces that make a smaller wardrobe feel intentional, organized, and easy to keep up with.",
+      "productSlugs": [
+        "space-saving-pants-hanger-multi-tier",
+        "hanging-closet-organizer",
+        "cascading-hanger-hooks-connectors",
+        "drawer-organizer-set-underwear-socks",
+        "belt-scarf-hanger-multi-loop",
+        "under-bed-storage-bags-clear-window"
+      ]
+    },
+    {
+      "slug": "closet-cozy-neutral-closet",
+      "title": "Cozy Neutral Closet",
+      "categorySlug": "closet",
+      "description": "Soft, calm closet organization—fabric bins, gentle zones, and everyday pieces that make the closet feel warm and livable.",
+      "productSlugs": [
+        "closet-shelf-bins-fabric-label-friendly",
+        "over-the-door-hooks-heavy-duty-set",
+        "vacuum-storage-bags-seasonal-clothing",
+        "hanging-jewelry-organizer-clear-pockets",
+        "woven-storage-baskets-closet",
+        "rechargeable-puck-lights-remote"
+      ]
+    },
+
+    {
+      "slug": "bathroom-spa-bathroom-aesthetic",
+      "title": "Spa Bathroom Aesthetic",
+      "categorySlug": "bathroom",
+      "description": "A calm, hotel-like bathroom—minimal surfaces, curated trays, and tidy countertop organization.",
+      "productSlugs": [
+        "bamboo-bathroom-tray-set",
+        "clear-acrylic-countertop-organizer-skincare-tray",
+        "cotton-swab-pad-canisters-set",
+        "glass-apothecary-jars-bathroom-set",
+        "over-cabinet-hair-tool-holder",
+        "hair-tool-organizer-heat-resistant-holder"
+      ]
+    },
+    {
+      "slug": "bathroom-renter-friendly-no-drill",
+      "title": "Renter-Friendly (No-Drill) Bathroom",
+      "categorySlug": "bathroom",
+      "description": "No-drill, easy-to-install organization ideas that keep the bathroom functional without permanent changes.",
+      "productSlugs": [
+        "toothbrush-wall-holder-no-drill",
+        "over-door-bathroom-organizer",
+        "shower-caddy-rust-resistant-hanging",
+        "adhesive-shower-shelves-no-drill",
+        "waterproof-adhesive-hooks-bathroom",
+        "shower-squeegee-holder-set"
+      ]
+    },
+    {
+      "slug": "bathroom-small-bathroom-max-storage",
+      "title": "Small Bathroom Max Storage",
+      "categorySlug": "bathroom",
+      "description": "Vertical storage, under-sink systems, and smart organizers that help small bathrooms feel bigger and easier.",
+      "productSlugs": [
+        "under-sink-sliding-drawer-organizer-2-tier",
+        "under-sink-organizer",
+        "over-the-toilet-storage-shelf",
+        "bathroom-drawer-organizer-set-modular",
+        "medicine-cabinet-shelf-organizer-2-level",
+        "slim-rolling-cart-bathroom"
+      ]
+    },
+
+    {
+      "slug": "craft-room-minimal-craft-studio",
+      "title": "Minimal Craft Studio",
+      "categorySlug": "craft-room",
+      "description": "A clean, functional craft setup—labels, drawers, and systems that keep supplies visible but not cluttered.",
+      "productSlugs": [
+        "label-maker-craft-room",
+        "clear-drawer-organizer-set-craft",
+        "stackable-clear-storage-drawers-desktop",
+        "drawer-dividers-deep-drawers",
+        "floating-wall-shelves-craft-station",
+        "pegboard-wall-organizer"
+      ]
+    },
+    {
+      "slug": "craft-room-color-coded-craft-storage",
+      "title": "Color-Coded Craft Storage",
+      "categorySlug": "craft-room",
+      "description": "Bright, satisfying organization—great if you love color grouping and quick visual access to supplies.",
+      "productSlugs": [
+        "rotating-craft-caddy",
+        "rolling-utility-cart-craft",
+        "washi-tape-organizer-dispenser",
+        "acrylic-marker-organizer-stand",
+        "stackable-front-open-bins-craft",
+        "craft-paper-organizer-12x12"
+      ]
+    },
+    {
+      "slug": "craft-room-small-space-craft-corner",
+      "title": "Small-Space Craft Corner",
+      "categorySlug": "craft-room",
+      "description": "Apartment-friendly craft storage—vertical solutions, rolling carts, and compact organizers.",
+      "productSlugs": [
+        "portable-project-storage-case-dividers",
+        "magnetic-tool-strip-craft",
+        "vinyl-roll-holder-rack",
+        "thread-organizer-rack",
+        "photo-storage-case-box-16-pack",
+        "zippered-vinyl-pouches-for-binders"
+      ]
+    }
+  ]
+}

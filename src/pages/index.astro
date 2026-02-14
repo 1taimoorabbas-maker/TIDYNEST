@@ -7,7 +7,7 @@ import siteData from '../data/site.json';
 import categoriesData from '../data/categories.json';
 import productsData from '../data/products.json';
 import guidesData from '../data/guides.json';
-import { getTopPicks, getCategoryIcon } from '../lib/helpers';
+import { getTopPicks } from '../lib/helpers';
 
 const { categories } = categoriesData;
 const { products } = productsData;
@@ -46,10 +46,10 @@ const description = siteData.defaultMetaDescription;
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
-              href="/category/craft-room/"
+              href="/styles/"
               class="inline-flex items-center justify-center bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-semibold py-3.5 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Explore Craft Room
+              Explore Styles
               <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -59,7 +59,7 @@ const description = siteData.defaultMetaDescription;
               href="/categories/"
               class="inline-flex items-center justify-center bg-white hover:bg-stone-50 text-stone-700 font-semibold py-3.5 px-8 rounded-xl transition-colors border border-stone-200"
             >
-              Browse All Categories
+              Browse All Rooms
             </a>
           </div>
         </div>
@@ -119,6 +119,88 @@ const description = siteData.defaultMetaDescription;
         {categories.map((category) => (
           <CategoryCard category={category} />
         ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/categories/" class="inline-flex items-center justify-center bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-semibold py-3 px-8 rounded-xl transition-colors shadow-sm">
+          View All Rooms
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop by Style (NEW) -->
+  <section class="py-16 lg:py-20 bg-white border-t border-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
+          Shop by Style
+        </h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">
+          Prefer a specific look? Shop curated sets designed for that aesthetic.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <!-- Pantry Styles -->
+        <a href="/styles/#pantry" class="group block relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 aspect-[4/3] border border-stone-100">
+          <div class="absolute inset-0">
+            <img src="/images/styles/pantry-minimal-pantry-aesthetic.jpg" alt="Pantry Styles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" onerror="this.onerror=null; this.src='/images/og-default.svg';" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/40 to-transparent"></div>
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-4">
+            <h3 class="font-serif font-semibold text-white text-base sm:text-lg leading-snug">Pantry Styles</h3>
+            <p class="text-white/80 text-xs sm:text-sm mt-1">Explore →</p>
+          </div>
+        </a>
+
+        <!-- Closet Styles -->
+        <a href="/styles/#closet" class="group block relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 aspect-[4/3] border border-stone-100">
+          <div class="absolute inset-0">
+            <img src="/images/styles/closet-quiet-luxury-closet.jpg" alt="Closet Styles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" onerror="this.onerror=null; this.src='/images/og-default.svg';" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/40 to-transparent"></div>
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-4">
+            <h3 class="font-serif font-semibold text-white text-base sm:text-lg leading-snug">Closet Styles</h3>
+            <p class="text-white/80 text-xs sm:text-sm mt-1">Explore →</p>
+          </div>
+        </a>
+
+        <!-- Bathroom Styles -->
+        <a href="/styles/#bathroom" class="group block relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 aspect-[4/3] border border-stone-100">
+          <div class="absolute inset-0">
+            <img src="/images/styles/bathroom-spa-bathroom-aesthetic.jpg" alt="Bathroom Styles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" onerror="this.onerror=null; this.src='/images/og-default.svg';" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/40 to-transparent"></div>
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-4">
+            <h3 class="font-serif font-semibold text-white text-base sm:text-lg leading-snug">Bathroom Styles</h3>
+            <p class="text-white/80 text-xs sm:text-sm mt-1">Explore →</p>
+          </div>
+        </a>
+
+        <!-- Craft Room Styles -->
+        <a href="/styles/#craft-room" class="group block relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 aspect-[4/3] border border-stone-100">
+          <div class="absolute inset-0">
+            <img src="/images/styles/craft-room-minimal-craft-studio.jpg" alt="Craft Room Styles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" onerror="this.onerror=null; this.src='/images/og-default.svg';" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/40 to-transparent"></div>
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-4">
+            <h3 class="font-serif font-semibold text-white text-base sm:text-lg leading-snug">Craft Room Styles</h3>
+            <p class="text-white/80 text-xs sm:text-sm mt-1">Explore →</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/styles/" class="inline-flex items-center justify-center bg-[color:var(--color-sage-700)] hover:bg-[color:var(--color-sage-800)] text-white font-semibold py-3 px-8 rounded-xl transition-colors shadow-sm">
+          View All Styles
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -273,7 +355,6 @@ const description = siteData.defaultMetaDescription;
           Join our newsletter for weekly organization inspiration, exclusive deals, and expert tips delivered to your inbox.
         </p>
 
-        <!-- Newsletter Placeholder Form -->
         <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Newsletter signup coming soon!');">
           <input
             type="email"
